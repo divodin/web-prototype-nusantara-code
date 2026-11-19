@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Operasional — Nusantara Code CMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/cms.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="side">
+    <a class="side-brand" href="index.html">
+      <span class="logo">NC</span>
+      <span>
+        <strong>Nusantara Code</strong>
+        <small>CMS Pengurus Kampus</small>
+      </span>
+    </a>
+
+    <nav class="side-nav">
+      <a class="is-on" href="dashboard.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        Dashboard Ringkasan
+      </a>
+      <a href="#jadwal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+        Pengumuman Pertemuan
+      </a>
+      <a href="#rekap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        Rekap Pertemuan &amp; Lomba
+      </a>
+      <a href="#modul">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+        Modul Ajar Praktikum
+      </a>
+    </nav>
+
+    <div class="side-foot">
+      <div class="side-foot-row">
+        <span class="dot green"></span>
+        <strong>Lab Operasional</strong>
+        <span class="badge green small">Lab 03 &amp; 04</span>
+      </div>
+      <div class="side-foot-row">
+        <span class="muted small">Sinkronisasi Portal</span>
+        <span class="muted small inline-dot">Realtime</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1>Dashboard Operasional</h1>
+        <span class="badge slate">Sistem Pengurus Komunitas</span>
+      </div>
+      <div class="topbar-actions">
+        <a class="portal-link" href="index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          Lihat Portal Publik
+        </a>
+        <div class="user">
+          <span class="avatar">RP</span>
+          <span class="user-meta"><strong>Rizal Syarifudin</strong><small>Koordinator Pengurus</small></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="badge-glass"><span class="dot green"></span>Halo Pengurus Aktif</span>
+          <h2>Selamat datang kembali, Udin!</h2>
+          <p>Kelola jadwal tatap muka lab, publikasi rekap &amp; lomba, serta distribusi modul ajar mahasiswa dengan antarmuka yang lebih luwes dan nyaman.</p>
+        </div>
+        <a class="btn white" href="#jadwal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+          Cek Jadwal
+        </a>
+      </section>
+
+      <section class="stat-grid">
+        <article class="stat-card">
+          <div class="stat-head">
+            <span>Pertemuan Aktif</span>
+            <span class="stat-icon indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="m9 16 2 2 4-4"/></svg>
+            </span>
+          </div>
+          <strong>4 Sesi</strong>
+          <p class="stat-sub"><span class="dot blue"></span>Terjadwal minggu ini di kampus</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-head">
+            <span>Rekap &amp; Lomba</span>
+            <span class="stat-icon amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3M9 21h6M12 14v7"/></svg>
+            </span>
+          </div>
+          <strong>23 Post</strong>
+          <p class="stat-sub"><span class="dot amber"></span>Tayang di portal &amp; etalase publik</p>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-head">
+            <span>Modul Terbit</span>
+            <span class="stat-icon green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+            </span>
+          </div>
+          <strong>14 File</strong>
+          <p class="stat-sub"><span class="dot green"></span>Tersedia dan siap diunduh mahasiswa</p>
+        </article>
+      </section>
+
+      <section class="card" id="jadwal">
+        <div class="card-head">
+          <div class="card-head-title">
+            <span class="icon-box indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+            </span>
+            <div>
+              <h3>Jadwal Pertemuan Mendatang</h3>
+              <p>Jadwal tatap muka laboratorium dan kelas UKM mendatang yang terorganisir.</p>
+            </div>
+          </div>
+          <button class="btn primary" data-open-modal>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+            Tambah Pertemuan
+          </button>
+        </div>
+
+        <div class="table">
+          <div class="thead">
+            <span>Topik &amp; Pemateri</span>
+            <span>Divisi</span>
+            <span>Waktu Pelaksanaan</span>
+            <span>Lokasi</span>
+            <span>Status</span>
+          </div>
+          <div class="tbody" id="rows">
+            <div class="trow">
+              <div class="cell-topic">
+                <strong>Workshop Next.js 14 &amp; Server Actions</strong>
+                <span class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg> Aditya Pratama</span>
+              </div>
+              <div><span class="badge blue">Web Dev</span></div>
+              <div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Kamis, 20 Mar 2025 · 16:30 WIB</div>
+              <div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.4"/></svg> Lab Komputer 03</div>
+              <div><span class="status on">Tayang</span></div>
+            </div>
+
+            <div class="trow">
+              <div class="cell-topic">
+                <strong>Hands-on MQTT &amp; ESP32 Smart Device</strong>
+                <span class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg> Fajar Sidiq</span>
+              </div>
+              <div><span class="badge amber">IoT &amp; Hardware</span></div>
+              <div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Jumat, 21 Mar 2025 · 16:00 WIB</div>
+              <div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.4"/></svg> Lab Rekayasa IoT</div>
+              <div><span class="status on">Tayang</span></div>
+            </div>
+
+            <div class="trow">
+              <div class="cell-topic">
+                <strong>Bedah Soal Seleksi Hackathon Kampus</strong>
+                <span class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg> Bagas Pamungkas</span>
+              </div>
+              <div><span class="badge purple">Algoritma</span></div>
+              <div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Sabtu, 22 Mar 2025 · 10:00 WIB</div>
+              <div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.4"/></svg> Ruang Teori 2.1</div>
+              <div><span class="status off">Draft</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="two-col">
+        <article class="card" id="rekap">
+          <div class="card-head">
+            <div class="card-head-title">
+              <span class="icon-box amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3M9 21h6M12 14v7"/></svg>
+              </span>
+              <div>
+                <h4>Rekap &amp; Info Lomba</h4>
+                <p>Konten terbit di etalase berita dan dokumentasi publik.</p>
+              </div>
+            </div>
+            <button class="btn amber">+ Buat Baru</button>
+          </div>
+
+          <div class="feed">
+            <article class="feed-item">
+              <span class="feed-icon blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+              </span>
+              <div class="feed-body">
+                <div class="feed-meta"><span class="badge blue xsmall">Rekap Pertemuan</span><span class="sep">•</span><span>18 Mar 2025</span></div>
+                <strong>Pertemuan #06: Optimasi Query Database Postgres &amp; Indexing</strong>
+              </div>
+              <span class="status on small">Live</span>
+            </article>
+
+            <article class="feed-item">
+              <span class="feed-icon amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3M9 21h6M12 14v7"/></svg>
+              </span>
+              <div class="feed-body">
+                <div class="feed-meta"><span class="badge amber xsmall">Berita Lomba</span><span class="sep">•</span><span class="warn">Deadline 30 Mar</span></div>
+                <strong>Pendaftaran Hackathon Nasional Kampus 2025</strong>
+              </div>
+              <span class="status on small">Live</span>
+            </article>
+
+            <article class="feed-item">
+              <span class="feed-icon blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+              </span>
+              <div class="feed-body">
+                <div class="feed-meta"><span class="badge blue xsmall">Rekap Pertemuan</span><span class="sep">•</span><span>12 Mar 2025</span></div>
+                <strong>Pertemuan #05: Setup Docker Compose untuk Fullstack Apps</strong>
+              </div>
+              <span class="status on small">Live</span>
+            </article>
+
+            <article class="feed-item">
+              <span class="feed-icon purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3M9 21h6M12 14v7"/></svg>
+              </span>
+              <div class="feed-body">
+                <div class="feed-meta"><span class="badge purple xsmall">Berita Lomba</span><span class="sep">•</span><span>Delegasi UKM</span></div>
+                <strong>UI/UX Design Sprint Competition Universitas</strong>
+              </div>
+              <span class="status on small">Live</span>
+            </article>
+          </div>
+        </article>
+
+        <article class="card" id="modul">
+          <div class="card-head">
+            <div class="card-head-title">
+              <span class="icon-box green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/></svg>
+              </span>
+              <div>
+                <h4>Modul Ajar</h4>
+                <p>Materi praktikum &amp; starter code untuk mahasiswa.</p>
+              </div>
+            </div>
+          </div>
+
+          <label class="dropzone">
+            <input type="file" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.2 9.5 4.25 4.25 0 0 0 7 19h10.5Z"/><path d="M12 16V9M9.5 11.5 12 9l2.5 2.5"/></svg>
+            <strong>Tarik file modul ke sini atau pilih berkas</strong>
+            <span>Format PDF atau ZIP (Maksimal 50 MB)</span>
+          </label>
+
+          <p class="section-label">Berkas Modul Terbaru</p>
+
+          <div class="files">
+            <div class="file">
+              <span class="file-badge amber">ZIP</span>
+              <div><strong>Modul 04: Starter Code Autentikasi JWT</strong><small>4.8 MB • Praktikum Sesi 4</small></div>
+              <span class="downloads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v10M8 11l4 4 4-4M5 20h14"/></svg> 68 unduh</span>
+            </div>
+            <div class="file">
+              <span class="file-badge rose">PDF</span>
+              <div><strong>Modul 03: Lembar Kerja REST API Node.js</strong><small>1.9 MB • Petunjuk Tugas</small></div>
+              <span class="downloads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v10M8 11l4 4 4-4M5 20h14"/></svg> 110 unduh</span>
+            </div>
+            <div class="file">
+              <span class="file-badge rose">PDF</span>
+              <div><strong>Modul 02: Dasar Git &amp; Branching Strategy</strong><small>1.2 MB • Modul Dasar</small></div>
+              <span class="downloads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v10M8 11l4 4 4-4M5 20h14"/></svg> 142 unduh</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="footnote">
+        <span class="dot green"></span>
+        Nusantara Code CMS • Semua data terhubung langsung ke portal publik universitas
+        <span class="footnote-status"><span class="dot green"></span>Server Aktif &amp; Terhubung</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Modal -->
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-bar"></div>
+    <div class="modal-head">
+      <span class="icon-box indigo big">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/><path d="M12 14v4M10 16h4"/></svg>
+      </span>
+      <div class="modal-title">
+        <h3 id="modal-title">Tambah Jadwal Pertemuan Baru</h3>
+        <p>Jadwalkan sesi tatap muka atau praktikum UKM.</p>
+      </div>
+      <button class="modal-close" data-close-modal aria-label="Tutup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <form class="modal-body" id="form">
+      <label class="field full">
+        <span>Topik &amp; Materi</span>
+        <input name="topik" required value="Workshop Docker &amp; CI/CD Pipeline" placeholder="Contoh: Workshop Docker & CI/CD">
+      </label>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Divisi</span>
+          <select name="divisi">
+            <option>Web Dev</option>
+            <option>IoT &amp; Hardware</option>
+            <option>Algoritma</option>
+            <option>AI &amp; Data Science</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Pemateri / Aslab</span>
+          <input name="pemateri" value="Aditya Pratama" placeholder="Nama pemateri">
+        </label>
+      </div>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Waktu Pelaksanaan</span>
+          <input name="waktu" value="Kamis, 27 Mar 2025 • 16:30 WIB" placeholder="Hari, tanggal • jam">
+        </label>
+        <label class="field">
+          <span>Lokasi / Lab</span>
+          <input name="lokasi" value="Lab Komputer 03" placeholder="Ruang atau lab">
+        </label>
+      </div>
+
+      <div class="field full">
+        <span>Status Publikasi</span>
+        <div class="toggle" data-toggle>
+          <button type="button" class="is-on" data-state="on"><span class="dot green"></span>Langsung Tayang</button>
+          <button type="button" data-state="off"><span class="dot slate"></span>Simpan Draft</button>
+        </div>
+      </div>
+
+      <div class="modal-foot">
+        <button type="button" class="btn ghost" data-close-modal>Batal</button>
+        <button type="submit" class="btn primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 13 4 4L19 7"/></svg>
+          Simpan &amp; Jadwalkan
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+const overlay = document.getElementById('overlay');
+const form = document.getElementById('form');
+let publish = 'on';
+
+function openModal() {
+  overlay.hidden = false;
+  document.body.style.overflow = 'hidden';
+  form.querySelector('input').focus();
+}
+function closeModal() {
+  overlay.hidden = true;
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', openModal));
+document.querySelectorAll('[data-close-modal]').forEach(b => b.addEventListener('click', closeModal));
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !overlay.hidden) closeModal(); });
+
+document.querySelector('[data-toggle]').addEventListener('click', e => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  publish = btn.dataset.state;
+  document.querySelectorAll('[data-toggle] button').forEach(b => b.classList.toggle('is-on', b === btn));
+});
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(form);
+  const row = document.createElement('div');
+  row.className = 'trow';
+  row.innerHTML =
+    '<div class="cell-topic"><strong></strong><span class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/></svg> <i></i></span></div>' +
+    '<div><span class="badge"></span></div>' +
+    '<div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <i></i></div>' +
+    '<div class="cell-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.4"/></svg> <i></i></div>' +
+    '<div><span class="status ' + (publish === 'on' ? 'on' : 'off') + '">' + (publish === 'on' ? 'Tayang' : 'Draft') + '</span></div>';
+  row.querySelector('.cell-topic strong').textContent = f.get('topik');
+  row.querySelector('.who i').textContent = f.get('pemateri');
+  const div = row.querySelector('.badge');
+  div.textContent = f.get('divisi');
+  div.className = 'badge ' + (f.get('divisi') === 'Web Dev' ? 'blue' : f.get('divisi').indexOf('IoT') === 0 ? 'amber' : 'purple');
+  row.querySelectorAll('.cell-meta i').forEach((el, i) => el.textContent = i === 0 ? f.get('waktu') : f.get('lokasi'));
+  document.getElementById('rows').prepend(row);
+  closeModal();
+  form.reset();
+  row.scrollIntoView({ block: 'center', behavior: 'smooth' });
+});
+</script>
+</body>
+</html>

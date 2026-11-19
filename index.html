@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nusantara Code — Komunitas Developer Mahasiswa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Podkova:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">NC</span>
+      <strong>Nusantara Code</strong>
+      <span class="pill ghost tiny mono">komunitas kampus</span>
+    </a>
+    <nav class="nav-links">
+      <a class="active" href="index.html">Home</a>
+      <a href="#divisi">Profile</a>
+      <a href="#showcase">Proyek</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="pill dark" href="dashboard.html">Portal CMS</a>
+      <span class="pill ghost mono tiny">Th. 2024/2025</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero wrap">
+    <p class="eyebrow center"><span class="live-dot"></span>Komunitas Nusantara Code Universitas Nusantara PGRI <span class="sep">·</span> Th. 2024/2025</p>
+    <div class="hero-grid">
+      <div class="hero-mark">
+        <svg viewBox="0 0 300 280" class="mark-svg" aria-hidden="true">
+          <g fill="none" stroke="#0a0a0a" stroke-linecap="square">
+            <path d="M74 40 L74 248" stroke-width="14"/>
+            <path d="M228 40 L228 248" stroke-width="14"/>
+            <path d="M74 42 L228 246" stroke-width="14"/>
+          </g>
+          <text x="150" y="172" text-anchor="middle" class="mark-word">N&lt;code&gt;</text>
+        </svg>
+        <p class="mark-name">Nusantara Code</p>
+      </div>
+      <div class="hero-copy">
+        <h1>Wadah Pembelajaran<br>Mahasiswa Untuk<br>Dunia Kerja</h1>
+        <p class="lede">Komunitas developer mahasiswa untuk belajar terarah, eksplorasi riset teknologi, dan membangun portofolio proyek perangkat lunak bersama.</p>
+        <div class="hero-cta">
+          <a class="btn dark" href="#showcase">Jelajahi Proyek <span class="ar">&#8600;</span></a>
+          <a class="btn outline" href="#gabung">Gabung Komunitas <span class="ar">&#8599;</span></a>
+          <a class="link-star" href="#hackathon"><span class="star">&#10035;</span> Hackathon 2025</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong>450+</strong><span>Mahasiswa Terdaftar</span></div>
+      <div class="stat"><strong>30+ Proyek</strong><span>Riset &amp; Portofolio Mandiri</span></div>
+      <div class="stat"><strong>12 Modul</strong><span>Praktikum Bebas Akses</span></div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="showcase">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow"><span class="bullet">&#8226;</span> Open Portfolio &amp; Code</p>
+        <h2>Showcase Proyek Mahasiswa</h2>
+        <p class="sub">Eksplorasi aplikasi, bot, dan sistem yang dikembangkan oleh mahasiswa Nusantara Code.</p>
+      </div>
+      <a class="pill dark" href="#gabung">+ Kirim Proyek Kamu</a>
+    </div>
+
+    <div class="chips" data-filters>
+      <button class="chip-btn is-on" data-filter="all">Semua Proyek</button>
+      <button class="chip-btn" data-filter="web">Web App</button>
+      <button class="chip-btn" data-filter="mobile">Mobile &amp; IoT</button>
+      <button class="chip-btn" data-filter="ai">AI &amp; Machine Learning</button>
+      <button class="chip-btn" data-filter="tooling">Tooling</button>
+    </div>
+
+    <div class="proj-grid">
+      <article class="proj" data-cat="mobile">
+        <div class="proj-top"><span class="tag-cat blue">Mobile Dev</span><span class="mono meta">MIT &#183; 1.2k Aktif</span></div>
+        <h3>SIAKAD Mobile Lite</h3>
+        <p class="by">Oleh Fajar Sidiq &amp; Tim Mobile</p>
+        <p class="desc">Presensi mandiri &amp; informasi jadwal kuliah mahasiswa kampus tanpa lagging server portal saat KRS-an semesteran.</p>
+        <div class="tags"><span>Flutter</span><span>Go</span><span>GraphQL</span></div>
+        <div class="proj-foot"><a href="#">Live Demo &#8599;</a><a href="#">GitHub Repo &#8599;</a></div>
+      </article>
+
+      <article class="proj" data-cat="mobile">
+        <div class="proj-top"><span class="tag-cat amber">IoT &amp; Hardware</span><span class="mono meta">GPL-3.0 &#183; 5 Node</span></div>
+        <h3>Smart Lab IoT System</h3>
+        <p class="by">Oleh Dr. Irfan &amp; Lab RPL Guild</p>
+        <p class="desc">Sistem monitoring kelistrikan dan suhu ruang Lab Komputer jurusan secara otomatis berbasis sensor jaringan lora &amp; MQTT.</p>
+        <div class="tags"><span>ESP32</span><span>Node.js</span><span>MQTT</span></div>
+        <div class="proj-foot"><a href="#">Live Demo &#8599;</a><a href="#">GitHub Repo &#8599;</a></div>
+      </article>
+
+      <article class="proj" data-cat="ai">
+        <div class="proj-top"><span class="tag-cat purple">AI &amp; NLP</span><span class="mono meta">Apache 2.0 &#183; 350 Q/d</span></div>
+        <h3>Bot Asisten Akademik</h3>
+        <p class="by">Oleh Salsabila &amp; AI Research</p>
+        <p class="desc">AI pembantu silabus, info krs, dan jadwal asistensi dosen dengan model RAG terintegrasi ke platform Telegram kampus.</p>
+        <div class="tags"><span>Python</span><span>LangChain</span><span>Qdrant</span></div>
+        <div class="proj-foot"><a href="#">Live Demo &#8599;</a><a href="#">GitHub Repo &#8599;</a></div>
+      </article>
+
+      <article class="proj" data-cat="web">
+        <div class="proj-top"><span class="tag-cat blue">Web Application</span><span class="mono meta">MIT &#183; 3.4k Unduhan</span></div>
+        <h3>Open Repository Kuliah</h3>
+        <p class="by">Oleh Kontributor Mahasiswa</p>
+        <p class="desc">Portal berbagi bahan belajar, modul praktikum, &amp; starter code lab terbuka yang dapat diunduh bebas oleh sivitas kampus.</p>
+        <div class="tags"><span>Next.js</span><span>PostgreSQL</span><span>Tailwind</span></div>
+        <div class="proj-foot"><a href="#">Live Demo &#8599;</a><a href="#">GitHub Repo &#8599;</a></div>
+      </article>
+
+      <article class="proj" data-cat="web">
+        <div class="proj-top"><span class="tag-cat rose">Web3 &amp; Security</span><span class="mono meta">MIT &#183; Sepolia</span></div>
+        <h3>E-Certificate Verifier</h3>
+        <p class="by">Oleh Ilham Ramadhan '21</p>
+        <p class="desc">Verifikasi keaslian sertifikat workshop &amp; kepengurusan UKM secara on-chain anti pemalsuan transkrip.</p>
+        <div class="tags"><span>Solidity</span><span>Ethers.js</span><span>IPFS</span></div>
+        <div class="proj-foot"><a href="#">Live Demo &#8599;</a><a href="#">GitHub Repo &#8599;</a></div>
+      </article>
+
+      <article class="proj" data-cat="tooling">
+        <div class="proj-top"><span class="tag-cat zinc">Tooling &amp; CLI</span><span class="mono meta">MIT &#183; Crates.io</span></div>
+        <h3>Aksara Transliterasi CLI</h3>
+        <p class="by">Oleh Bagas Pamungkas '21</p>
+        <p class="desc">Utilitas komputasi penerjemah aksara lokal berbasis command line berkinerja tinggi untuk pemrosesan teks linguistik.</p>
+        <div class="tags"><span>Rust</span><span>WASM</span></div>
+        <div class="proj-foot"><a href="#">Live Demo &#8599;</a><a href="#">GitHub Repo &#8599;</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="divisi">
+    <p class="eyebrow"><span class="bullet">&#8226;</span> Divisi Teknis &amp; Praktikum</p>
+    <div class="sec-head tight">
+      <div>
+        <h2>Grup Peminatan &amp; Bimbingan Lab</h2>
+        <p class="sub">Sesi pertemuan tatap muka di Gedung Lab Komputer kampus dengan bimbingan asisten laboratorium.</p>
+      </div>
+    </div>
+
+    <div class="div-grid">
+      <article class="div-card">
+        <div class="div-top">
+          <span class="div-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          </span>
+          <span class="mono meta">DIV 01</span>
+        </div>
+        <h3>Web &amp; Backend</h3>
+        <p>Fullstack TypeScript, React, Next.js, arsitektur REST/GraphQL, dan perancangan database relasional.</p>
+        <ul class="div-meta">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Tiap Selasa 16:30 WIB</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Lab Komputer 3</li>
+        </ul>
+      </article>
+
+      <article class="div-card">
+        <div class="div-top">
+          <span class="div-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </span>
+          <span class="mono meta">DIV 02</span>
+        </div>
+        <h3>Mobile &amp; IoT</h3>
+        <p>Pengembangan multiplatform Flutter &amp; Kotlin, integrasi mikrokontroler ESP32, serta protokol sensor.</p>
+        <ul class="div-meta">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Tiap Rabu 16:30 WIB</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Lab Rekayasa IoT</li>
+        </ul>
+      </article>
+
+      <article class="div-card">
+        <div class="div-top">
+          <span class="div-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </span>
+          <span class="mono meta">DIV 03</span>
+        </div>
+        <h3>AI &amp; Data Science</h3>
+        <p>Eksplorasi LLM, machine learning dasar, visualisasi Python, dan bimbingan model untuk tugas akhir.</p>
+        <ul class="div-meta">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Tiap Kamis 16:30 WIB</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Lab Komputer Riset</li>
+        </ul>
+      </article>
+
+      <article class="div-card">
+        <div class="div-top">
+          <span class="div-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17.5 19a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.2 9.5 4.25 4.25 0 0 0 7 19h10.5Z"/></svg>
+          </span>
+          <span class="mono meta">DIV 04</span>
+        </div>
+        <h3>Cloud &amp; DevOps</h3>
+        <p>Manajemen server Linux kampus, kontainerisasi Docker, CI/CD pipeline, dan arsitektur deployment.</p>
+        <ul class="div-meta">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Tiap Jumat 16:00 WIB</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Server Room / Lab 1</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap" id="hackathon">
+    <article class="hack">
+      <p class="eyebrow"><span class="bullet">&#8226;</span> Kompetisi Tahunan Kampus 2025</p>
+      <h2>Campus Codefest &amp; Hackathon 2025</h2>
+      <p class="hack-lede">Tantangan 24 jam membangun solusi digital untuk sivitas akademika kampus: perbaikan sistem akademik, otomasi operasional lab, dan platform edukasi terbuka.</p>
+      <div class="hack-stats">
+        <div><span class="mono label">Hadiah Utama</span><strong>Rp 15 Juta + SKPI</strong></div>
+        <div><span class="mono label">Batas Pendaftaran</span><strong>25 Maret 2025</strong></div>
+        <div><span class="mono label">Kuota Tim</span><strong>32 Tim Mahasiswa</strong></div>
+      </div>
+      <div class="hack-cta">
+        <a class="btn dark" href="#">Daftar Hackathon</a>
+        <a class="btn ghost" href="#">Buku Panduan &amp; Aturan</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section wrap" id="gabung">
+    <div class="news">
+      <div>
+        <h3>Warta Mahasiswa Pengembang</h3>
+        <p>Dapatkan jadwal agenda mingguan, rilis modul, dan info magang industri.</p>
+      </div>
+      <form class="news-form">
+        <input type="email" name="email" required placeholder="alamat.email@kampus.id" aria-label="Alamat email">
+        <button class="pill dark" type="submit">Langganan</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="brand-mark small">NC</span>
+      <strong>Nusantara Code</strong>
+      <p>Unit Kegiatan Mahasiswa Rekayasa Perangkat Lunak kampus. Gotong royong dan berdaya saing global.</p>
+    </div>
+    <div>
+      <h4>Navigasi</h4>
+      <ul><li><a href="#showcase">Showcase Proyek</a></li><li><a href="#divisi">Divisi Teknis</a></li><li><a href="#divisi">Jadwal Bimbingan Lab</a></li><li><a href="#hackathon">Hackathon Kampus</a></li></ul>
+    </div>
+    <div>
+      <h4>Kolaborasi</h4>
+      <ul><li><a href="#">Kontak Dosen Pembina</a></li><li><a href="#">Pusat Asisten Praktikum</a></li><li><a href="#">Pengajuan Proyek Mitra</a></li><li><a href="#">Konversi SKS &amp; SKPI</a></li></ul>
+    </div>
+    <div>
+      <h4>Internal</h4>
+      <ul><li><a href="dashboard.html">Portal CMS Console</a></li><li><a href="#">Repositori Dokumen TA</a></li><li><a href="#">Inventaris Alat Lab</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&#169; 2025 Nusantara Code. Gotong Royong Digital Kampus.</span>
+    <span class="foot-flags mono"><span>&#183; Lab Online</span><span>MIT Licensed Open Source</span></span>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-filter]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('[data-filter]').forEach(function (x) { x.classList.toggle('is-on', x === b); });
+    document.querySelectorAll('.proj').forEach(function (card) {
+      card.hidden = b.dataset.filter !== 'all' && card.dataset.cat !== b.dataset.filter;
+    });
+  });
+});
+
+document.querySelector('.news-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  this.reset();
+  this.querySelector('button').textContent = 'Terkirim';
+});
+</script>
+</body>
+</html>

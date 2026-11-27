@@ -1,22 +1,33 @@
 /* ==========================================================================
-   NUSANTARA CODE — halaman roadmap
-   Menandai link roadmap aktif & memperbaiki viewBox ikon SVG yang terpotong.
+   NUSANTARA CODE — Halaman Roadmap
+   Menandai link roadmap aktif & merapikan viewBox ikon SVG.
    ========================================================================== */
 (function () {
   "use strict";
 
-  var file = window.location.pathname.split("/").pop() || "index.html";
+  var currentSlug = window.location.pathname
+    .split("/")
+    .pop()
+    .replace(/\.html$/i, "") || "index";
 
-  document.querySelectorAll(".rm-nav a, .rm-switch a").forEach(function (link) {
-    var target = (link.getAttribute("href") || "").split("/").pop();
-    if (target === file) {
+  document.querySelectorAll(".site-nav a, .rm-switch a").forEach(function (link) {
+    var href = link.getAttribute("href") || "";
+    var targetSlug = href
+      .split("#")[0]
+      .split("?")[0]
+      .split("/")
+      .pop()
+      .replace(/\.html$/i, "");
+
+    if (link.closest(".site-nav") && targetSlug === "web-development") {
+      link.setAttribute("aria-current", "page");
+    } else if (targetSlug && targetSlug === currentSlug) {
       link.setAttribute("aria-current", "page");
     } else {
       link.removeAttribute("aria-current");
     }
   });
 
-  // Perbaiki ikon SVG di dalam .rm-step__icon yang terpotong karena tidak punya viewBox
   document.querySelectorAll(".rm-step__icon svg").forEach(function (svg) {
     try {
       var box = svg.getBBox();

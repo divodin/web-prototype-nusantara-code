@@ -1,10 +1,5 @@
 /* ==========================================================================
    HEADER — satu spesifikasi untuk index.html dan roadmap/*.html
-   --------------------------------------------------------------------------
-   Semua ukuran header (tipografi, jarak, tinggi baris) didefinisikan HANYA
-   di file ini, supaya header di setiap halaman benar-benar sama.
-
-   Markup-nya berasal dari header.html (disalin dengan scripts/sync-header.js).
    ========================================================================== */
 
 .site-header {
@@ -14,6 +9,8 @@
   --header-nav-size: 20px;
   --header-nav-gap: 48px;
 
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +64,6 @@
   text-decoration-thickness: 2px;
 }
 
-/* Layar sempit: header turun jadi dua baris, ukuran teks tetap konsisten */
 @media (max-width: 900px) {
   .site-header {
     --header-pad-top: 20px;

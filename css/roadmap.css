@@ -34,8 +34,6 @@
     var(--blue);
 }
 
-/* Header: seluruh ukuran ada di css/header.css (satu sumber untuk semua halaman) */
-
 .rm-hero__title {
   margin: 144px auto 0;
   padding: 0 36px;
@@ -55,10 +53,6 @@
   line-height: 1.5;
   text-align: center;
   color: var(--white);
-}
-
-.rm-hero__icon {
-  display: none;
 }
 
 /* ---------- Konten 2 Kolom ---------- */
@@ -101,11 +95,6 @@
   box-shadow: 0 20px 35px -10px rgba(16, 44, 88, 0.14);
 }
 
-/* Pembungkus lama tembus ke grid agar label TAHAP naik ke atas H2 */
-.rm-step__label {
-  display: contents;
-}
-
 .rm-step__icon {
   grid-column: 1;
   grid-row: 1 / 3;
@@ -115,12 +104,6 @@
   height: 64px;
   overflow: visible;
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
-}
-
-/* Matikan filter internal SVG bawaan Figma yang bentrok id="filter1" */
-.rm-step__icon svg [filter],
-.rm-card__head svg [filter] {
-  filter: none !important;
 }
 
 .rm-step__icon svg,
@@ -166,14 +149,6 @@
   color: #586b87;
 }
 
-.rm-step__stack {
-  display: block;
-  margin-top: 6px;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #586b87;
-}
-
 /* ---------- Sidebar ---------- */
 .rm-side {
   display: flex;
@@ -212,13 +187,6 @@
   gap: 10px;
 }
 
-.rm-card__head svg {
-  flex: none;
-  width: 26px;
-  height: 26px;
-  color: var(--blue);
-}
-
 .rm-card__title {
   font-size: 17px;
   font-weight: 700;
@@ -238,7 +206,6 @@
   padding: 0;
 }
 
-/* Varian kartu biru */
 .rm-card--blue {
   background: var(--blue);
   color: var(--white);
@@ -252,10 +219,6 @@
 
 .rm-card--blue .rm-card__text {
   color: rgba(255, 255, 255, 0.9);
-}
-
-.rm-card--blue .rm-card__head svg {
-  color: var(--white);
 }
 
 /* ---------- Navigasi Antar Roadmap ---------- */
@@ -278,7 +241,7 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--navy);
-  transition: border-color 0.18s ease, color 0.18s ease;
+  transition: border-color 0.18s ease, color 0.18s ease, background-color 0.18s ease;
 }
 
 .rm-switch a:hover {
@@ -286,36 +249,15 @@
   color: var(--blue);
 }
 
-.rm-switch a[aria-current="page"] {
+.roadmap-page .rm-switch a[aria-current="page"] {
   border-color: var(--blue);
   background: var(--blue);
   color: var(--white);
 }
 
-/* ---------- Footer ---------- */
-.rm-footer {
-  display: flex;
-  align-items: center;
-  gap: 96px;
-  min-height: 87px;
+/* ---------- Footer di Halaman Roadmap ---------- */
+.roadmap-page .site-footer {
   margin-top: 96px;
-  padding: 32px 56px;
-  background: var(--white);
-}
-
-.rm-footer__brand {
-  font-family: "Poppins", var(--text);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: var(--navy);
-}
-
-.rm-footer__tagline {
-  font-size: 14px;
-  font-style: italic;
-  line-height: 1.4;
-  color: var(--slate);
 }
 
 /* ---------- Responsif Tablet & Mobile ---------- */
@@ -386,10 +328,11 @@
     width: calc(100% - 32px);
   }
 
-  .rm-footer {
+  .roadmap-page .site-footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    height: auto;
     margin-top: 64px;
     padding: 28px 20px;
   }

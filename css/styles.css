@@ -1,6 +1,5 @@
 /* ==========================================================================
    NUSANTARA CODE — LANDING PAGE (DESKTOP)
-   Sumber: FigCraft "ANU 1" → "Nusantara Code - Desktop prototype" (1440 px)
    ========================================================================== */
 
 :root {
@@ -67,7 +66,6 @@ img, svg { display: block; max-width: 100%; }
   flex-direction: column;
 }
 
-/* Jarak antar-section mengikuti posisi di frame desain */
 .discover { margin-top: 52px; }
 .about    { margin-top: 21px; }
 .services { margin-top: 63px; }
@@ -128,11 +126,6 @@ img, svg { display: block; max-width: 100%; }
     url("../assets/image%202.png") center / cover no-repeat,
     var(--blue);
 }
-
-/* ---------- Header ----------
-   Semua ukuran header ada di css/header.css (satu sumber untuk semua halaman).
-   Di sini sengaja tidak ada aturan .site-header lagi. */
-.site-header { z-index: 2; }
 
 /* ---------- Hero content ---------- */
 .hero__content {
@@ -201,9 +194,7 @@ img, svg { display: block; max-width: 100%; }
 .hero__cta-icon { width: 38px; height: 38px; flex: 0 0 auto; }
 
 /* ==========================================================================
-   IKON — slot kosong
-   Isi dengan <svg> atau <img> di dalam .icon-slot.
-   Ukuran tiap slot sudah dikunci sesuai desain, jadi layout tidak bergeser.
+   IKON
    ========================================================================== */
 .icon-slot {
   display: inline-flex;
@@ -221,17 +212,14 @@ img, svg { display: block; max-width: 100%; }
   display: block;
 }
 
-/* Penanda halus HANYA saat slot masih kosong */
 .icon-slot:empty {
   border: 1px dashed currentColor;
   border-radius: 4px;
   opacity: 0.35;
 }
 
-/* Arah panah: ikon dasar mengarah ke kanan */
 .icon-slot.is-flipped > svg { transform: scaleX(-1); }
 .icon-slot.is-up-right > svg { transform: rotate(-45deg); }
-
 
 /* ==========================================================================
    DISCOVER / CAROUSEL — 1440 × 712
@@ -254,7 +242,6 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .discover__intro { width: 438px; }
-
 .discover__intro .section__title { margin-top: 10px; }
 
 .carousel-controls { display: flex; gap: 10px; }
@@ -280,7 +267,6 @@ img, svg { display: block; max-width: 100%; }
 .round-btn--primary { background: var(--blue); border-color: var(--blue); color: var(--white); }
 .round-btn__icon { width: 24px; height: 24px; }
 
-/* ---------- Carousel track ---------- */
 .carousel {
   display: flex;
   gap: 24px;
@@ -323,7 +309,6 @@ img, svg { display: block; max-width: 100%; }
 .card__preview--lilac { background: var(--lilac); }
 .card__preview--blue { background: var(--blue); color: var(--white); }
 
-/* --- Card 01: learning snippet --- */
 .snippet {
   width: 100%;
   height: 133px;
@@ -343,7 +328,6 @@ img, svg { display: block; max-width: 100%; }
 
 .snippet p + p { margin-top: 7px; }
 
-/* --- Card 02: project board --- */
 .project-board {
   width: 100%;
   height: 147px;
@@ -416,7 +400,6 @@ img, svg { display: block; max-width: 100%; }
   color: var(--navy);
 }
 
-/* --- Card 03: community --- */
 .card__preview-label {
   font-size: 11px;
   font-weight: 600;
@@ -435,7 +418,6 @@ img, svg { display: block; max-width: 100%; }
   color: var(--white);
 }
 
-/* --- Card details --- */
 .card__body {
   display: flex;
   flex-direction: column;
@@ -469,10 +451,8 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .card__more:hover { text-decoration: underline; text-underline-offset: 4px; }
-
 .card__more-icon { width: 16px; height: 28px; }
 
-/* ---------- Carousel position ---------- */
 .carousel-position {
   display: flex;
   align-items: center;
@@ -491,7 +471,6 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .dot.is-active { width: 40px; background: var(--blue); }
-
 .carousel-count { font-size: 13px; font-weight: 500; font-style: italic; color: var(--slate); }
 
 /* ==========================================================================
@@ -558,7 +537,6 @@ img, svg { display: block; max-width: 100%; }
 
 .about__features li { display: flex; gap: 16px; align-items: flex-start; }
 
-/* Slot ikon About: kotak berwarna sesuai desain, isi ikonnya menyusul */
 .about__icon {
   flex: 0 0 40px;
   width: 40px;
@@ -570,12 +548,6 @@ img, svg { display: block; max-width: 100%; }
 .about__icon--belajar     { background: #0866f5; }
 .about__icon--kolaborasi  { background: #0e9f6e; }
 .about__icon--berkembang  { background: #7c3aed; }
-
-/* Saat kosong, tampilkan kotak warna redup sebagai penanda area ikon */
-.about__icon.icon-slot:empty {
-  border: 1px dashed rgba(255, 255, 255, 0.55);
-  opacity: 0.55;
-}
 
 .about__features strong { display: block; font-size: 15px; font-weight: 700; color: var(--navy); }
 .about__features p { margin-top: 0; font-size: 12px; line-height: 1.4; color: var(--slate); }
@@ -635,7 +607,6 @@ img, svg { display: block; max-width: 100%; }
   gap: 24px;
 }
 
-/* ---------- Approach card ---------- */
 .approach {
   display: flex;
   flex-direction: column;
@@ -708,7 +679,6 @@ img, svg { display: block; max-width: 100%; }
 .approach__cta-icon { width: 17px; height: 29px; }
 .approach__cta:hover { transform: translateY(-2px); }
 
-/* ---------- Service list ---------- */
 .service-list { display: flex; flex-direction: column; gap: 16px; }
 
 .service {
@@ -862,7 +832,6 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .contact__btn:hover { background: #0a55d6; }
-
 .contact__note { font-size: 14px; font-style: italic; line-height: 1.45; color: var(--slate); }
 
 /* ==========================================================================
@@ -902,5 +871,9 @@ img, svg { display: block; max-width: 100%; }
    MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

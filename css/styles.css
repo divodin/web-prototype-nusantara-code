@@ -1,5 +1,5 @@
-/* ==========================================================================
-   NUSANTARA CODE — LANDING PAGE (DESKTOP)
+﻿/* ==========================================================================
+   NUSANTARA CODE â€” LANDING PAGE (DESKTOP)
    ========================================================================== */
 
 :root {
@@ -36,7 +36,9 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; overflow-x: clip; }
+
+body { overflow-x: clip; }
 
 body {
   margin: 0;
@@ -107,7 +109,7 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* ==========================================================================
-   HOME / HERO — 1440 × 836
+   HOME / HERO â€” 1440 Ã— 836
    ========================================================================== */
 .hero {
   position: relative;
@@ -219,11 +221,13 @@ img, svg { display: block; max-width: 100%; }
   opacity: 0.35;
 }
 
-.icon-slot.is-flipped > svg { transform: scaleX(-1); }
-.icon-slot.is-up-right > svg { transform: rotate(-45deg); }
+.icon-slot.is-flipped > svg,
+.icon-slot.is-flipped > img { transform: scaleX(-1); }
+.icon-slot.is-up-right > svg,
+.icon-slot.is-up-right > img { transform: rotate(-45deg); }
 
 /* ==========================================================================
-   DISCOVER / CAROUSEL — 1440 × 712
+   DISCOVER / CAROUSEL â€” 1440 Ã— 712
    ========================================================================== */
 .discover {
   display: flex;
@@ -496,7 +500,7 @@ img, svg { display: block; max-width: 100%; }
 .carousel-count { font-size: 13px; font-weight: 500; font-style: italic; color: var(--slate); }
 
 /* ==========================================================================
-   ABOUT — 1280 × 720
+   ABOUT â€” 1280 Ã— 720
    ========================================================================== */
 .about {
   position: relative;
@@ -594,7 +598,7 @@ img, svg { display: block; max-width: 100%; }
 .about__cta:hover { border-color: var(--blue); transform: translateY(-2px); }
 
 /* ==========================================================================
-   SERVICES / ROADMAP — 1440 × 755
+   SERVICES / ROADMAP â€” 1440 Ã— 755
    ========================================================================== */
 .services {
   display: flex;
@@ -740,7 +744,7 @@ img, svg { display: block; max-width: 100%; }
 .service__arrow { width: 18px; height: 32px; color: var(--blue); }
 
 /* ==========================================================================
-   BLOG — 1440 × 537
+   BLOG â€” 1440 Ã— 537
    ========================================================================== */
 .blog {
   display: flex;
@@ -807,7 +811,7 @@ img, svg { display: block; max-width: 100%; }
 .post__link:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* ==========================================================================
-   CONTACT — 1440 × 323
+   CONTACT â€” 1440 Ã— 323
    ========================================================================== */
 .contact {
   display: flex;
@@ -857,7 +861,7 @@ img, svg { display: block; max-width: 100%; }
 .contact__note { font-size: 14px; font-style: italic; line-height: 1.45; color: var(--slate); }
 
 /* ==========================================================================
-   FOOTER — 1440 × 87
+   FOOTER â€” 1440 Ã— 87
    ========================================================================== */
 .site-footer {
   display: flex;
@@ -890,7 +894,7 @@ img, svg { display: block; max-width: 100%; }
 .site-footer__copy:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* ==========================================================================
-   LAYAR < 1440px — kanvas tetap menyusut, bukan terpotong
+   LAYAR < 1440px â€” kanvas tetap menyusut, bukan terpotong
    ========================================================================== */
 @media (max-width: 1439px) {
   .hero__title {
@@ -931,10 +935,43 @@ img, svg { display: block; max-width: 100%; }
 /* ==========================================================================
    MOTION
    ========================================================================== */
+/* ---------- Responsif dasar (viewport device-width) ---------- */
+@media (max-width: 900px) {
+  :root { --gutter: 20px; }
+  .page { gap: 24px; padding-top: 20px; overflow-x: clip; }
+  .site-header, .discover, .about, .services, .blog, .contact { padding-left: 20px; padding-right: 20px; }
+  .site-header { height: auto; flex-wrap: wrap; gap: 16px; justify-content: center; }
+  .site-nav ul { flex-wrap: wrap; gap: 14px 20px; justify-content: center; }
+  .hero { min-height: auto; padding: 48px 20px 120px; gap: 24px; }
+  .hero__title { font-size: clamp(38px, 10vw, 72px); line-height: 0.95; width: 100%; height: auto; }
+  .hero__badge, .hero__desc { width: 100%; max-width: 560px; }
+  .about { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; gap: 32px; height: auto; }
+  .about__media { width: 100%; max-width: 520px; height: 340px; margin: 0 auto; }
+  .about__card--foreground { left: 16px; top: 150px; width: min(320px, 78%); height: auto; }
+  .about__content, .about__title, .about__desc, .about__features { width: 100%; max-width: 100%; }
+  .about__chip { width: auto; max-width: 100%; }
+  .services { height: auto; padding-top: 48px; padding-bottom: 48px; }
+  .services__head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .services__heading, .services__desc { width: 100%; max-width: 100%; }
+  .services__grid { grid-template-columns: 1fr; }
+  .service { grid-template-columns: 56px minmax(0,1fr) 40px; gap: 12px; padding: 20px 0; }
+  .service__num { font-size: 36px; }
+  .service__title { font-size: 28px; }
+  .blog { height: auto; padding-top: 48px; padding-bottom: 48px; }
+  .blog__head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .blog__intro, .blog__desc { width: 100%; max-width: 100%; }
+  .blog__grid { grid-template-columns: 1fr; }
+  .post__media { height: 220px; }
+  .approach { height: auto; width: 100%; max-width: 100%; }
+  .approach__steps { margin-top: 24px; }
+  .approach__cta { height: auto; }
+  .contact { grid-template-columns: 1fr; gap: 24px; padding-top: 48px; padding-bottom: 48px; height: auto; }
+  .contact__intro, .contact__title, .contact__desc { width: 100%; max-width: 100%; }
+  .contact__actions { width: 100%; }
+  .site-footer__inner { grid-template-columns: 1fr; gap: 32px; padding: 48px 20px; height: auto; }
+  .site-footer__bottom { flex-direction: column; gap: 12px; padding: 20px; height: auto; text-align: center; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
-}

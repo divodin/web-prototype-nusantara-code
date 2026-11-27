@@ -19,9 +19,9 @@
       .pop()
       .replace(/\.html$/i, "");
 
-    if (link.closest(".site-nav") && targetSlug === "web-development") {
+    if (link.closest(".site-nav") && href.indexOf("#roadmap") !== -1) {
       link.setAttribute("aria-current", "page");
-    } else if (targetSlug && targetSlug === currentSlug) {
+    } else if (link.closest(".rm-switch") && targetSlug === currentSlug) {
       link.setAttribute("aria-current", "page");
     } else {
       link.removeAttribute("aria-current");

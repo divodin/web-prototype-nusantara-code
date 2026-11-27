@@ -1,0 +1,337 @@
+/* ==========================================================================
+   NUSANTARA CODE — halaman detail roadmap
+   Sumber: FigCraft "ANU 1" → frame overlay roadmap
+   (UI/UX #60129542312 · Web Development #60129542145 · Android #55834575057)
+   ========================================================================== */
+
+.roadmap-page {
+  background: var(--sky);
+  color: #000;
+  font-family: "Poppins", var(--text);
+  min-height: 100vh;
+}
+
+/* ---------- Kartu HOME (1353×min 518, radius 30) ---------- */
+.rm-hero {
+  position: relative;
+  width: min(1353px, calc(100% - 88px));
+  min-height: 518px;
+  margin: 46px auto 0;
+  border-radius: 30px;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--white);
+  background: var(--blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.rm-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(4, 60, 210, 0.25) 0%, rgba(6, 80, 230, 0.05) 55%, rgba(4, 55, 190, 0.35) 100%),
+    url("../assets/hero-bg.png") center / cover no-repeat,
+    var(--blue);
+}
+
+.rm-hero__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 24px 36px 0;
+}
+
+.rm-logo {
+  font-family: "Poppins", var(--text);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
+
+.rm-nav {
+  display: flex;
+  align-items: center;
+  gap: 49px;
+}
+
+.rm-nav a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--white);
+  opacity: 0.92;
+  transition: opacity 0.18s ease;
+  white-space: nowrap;
+}
+
+.rm-nav a:hover,
+.rm-nav a[aria-current="page"] { opacity: 1; }
+.rm-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
+
+.rm-hero__title {
+  margin: 144px auto 0;
+  padding: 0 36px;
+  font-family: "Poppins", var(--text);
+  font-weight: 700;
+  font-size: clamp(36px, 6.4vw, 64px);
+  line-height: 1.15;
+  text-align: center;
+  color: var(--white);
+}
+
+.rm-hero__sub {
+  max-width: 828px;
+  margin: 24px auto 0;
+  padding: 0 36px;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--white);
+}
+
+/* Ikon di pojok kanan bawah kartu: posisi ×223px, keluar dari tepi bawah */
+.rm-hero__icon {
+  position: absolute;
+  right: 36px;
+  bottom: -112px;
+  display: grid;
+  place-items: center;
+  width: 223px;
+  height: 223px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.rm-hero__icon SVG { width: 100%; height: 100%; }
+
+/* ---------- Konten 2 kolom ---------- */
+.rm-body {
+  display: grid;
+  grid-template-columns: minmax(0, 847px) minmax(0, 437px);
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+  width: min(1328px, calc(100% - 112px));
+  margin: 88px auto 0;
+}
+
+.rm-steps { display: flex; flex-direction: column; gap: 50px; }
+
+/* Kartu putih 818×141: label kiri + teks kanan */
+.rm-step {
+  display: grid;
+  grid-template-columns: 232px minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  min-height: 141px;
+  padding: 20px 34px;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 1px 0 rgba(16, 44, 88, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rm-step:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 26px 44px -34px rgba(16, 44, 88, 0.55);
+}
+
+.rm-step__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 64px;
+  color: var(--blue);
+}
+
+.rm-step__icon svg { width: 100%; height: 100%; }
+
+.rm-step__label { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+
+.rm-step__num {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+}
+
+.rm-step__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000;
+}
+
+.rm-step__desc {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #000;
+  max-width: 470px;
+}
+
+.rm-step__stack {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #586b87;
+}
+
+/* ---------- Sidebar ---------- */
+.rm-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 358px;
+  margin-left: auto;
+}
+
+.rm-card {
+  border-radius: 18px;
+  background: var(--white);
+  overflow: hidden;
+  min-height: 359px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rm-card__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 28px 0;
+}
+
+.rm-card__head svg { width: 31px; height: 30px; color: var(--blue); flex: none; }
+
+.rm-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000;
+}
+
+.rm-card__text {
+  margin: 20px 28px 0;
+  padding: 20px 18px;
+  border-radius: 12px;
+  background: var(--sky);
+  font-size: 11px;
+  line-height: 1.55;
+  text-align: center;
+  color: #000;
+}
+
+.rm-card__img {
+  width: calc(100% - 84px);
+  margin: auto auto 0;
+  max-height: 190px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.rm-card--tip { background: var(--white); }
+.rm-card--tip .rm-card__title { color: #000; }
+.rm-card--tip .rm-card__head svg { color: var(--blue); }
+
+.rm-card__body {
+  padding: 24px 28px 28px;
+}
+
+.rm-card__body p {
+  margin-top: 18px;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--navy);
+}
+
+.rm-card--blue { background: var(--blue); color: var(--white); }
+.rm-card--blue .rm-card__title,
+.rm-card--blue .rm-card__body p { color: var(--white); }
+.rm-card--blue .rm-card__head svg { color: var(--white); }
+.rm-card--blue .rm-card__text { background: rgba(255, 255, 255, 0.14); color: var(--white); }
+.rm-card--blue .rm-card__img { margin: 18px auto 0; }
+.rm-card--blue .rm-card__body { padding-top: 12px; }
+.rm-card--blue .rm-card__head { padding-bottom: 0; }
+
+/* ---------- Footer 1440×87 ---------- */
+.rm-footer {
+  display: flex;
+  align-items: center;
+  gap: 96px;
+  min-height: 87px;
+  margin-top: 96px;
+  padding: 32px 56px;
+  background: var(--white);
+}
+
+.rm-footer__brand {
+  font-family: "Poppins", var(--text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--navy);
+}
+
+.rm-footer__tagline {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--slate);
+}
+
+/* ---------- Switch antar roadmap ---------- */
+.rm-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: min(1328px, calc(100% - 112px));
+  margin: 56px auto 0;
+}
+
+.rm-switch a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid #cddcf3;
+  background: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--navy);
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.rm-switch a:hover { border-color: var(--blue); color: var(--blue); }
+.rm-switch a[aria-current="page"] { background: var(--blue); border-color: var(--blue); color: var(--white); }
+
+@media (max-width: 1180px) {
+  .rm-body { grid-template-columns: minmax(0, 1fr); }
+  .rm-side { max-width: none; flex-direction: row; flex-wrap: wrap; }
+  .rm-card { flex: 1 1 320px; min-height: 0; }
+}
+
+@media (max-width: 900px) {
+  .rm-hero { width: calc(100% - 32px); margin-top: 16px; border-radius: 24px; }
+  .rm-hero__top { padding: 20px 20px 0; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .rm-nav { gap: 24px; flex-wrap: wrap; }
+  .rm-nav a { font-size: 15px; }
+  .rm-hero__title { margin: 56px 20px 0; }
+  .rm-hero__sub { padding: 0 20px; font-size: 16px; }
+  .rm-hero__icon { width: 140px; height: 140px; right: 20px; bottom: -70px; }
+  .rm-body { width: calc(100% - 32px); margin-top: 64px; }
+  .rm-step { grid-template-columns: 1fr; gap: 14px; padding: 22px; }
+  .rm-step__label { flex-direction: row; align-items: center; gap: 16px; }
+  .rm-step__icon { margin-left: 0; }
+  .rm-step__desc { max-width: none; }
+  .rm-switch { width: calc(100% - 32px); }
+  .rm-footer { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 64px; padding: 28px 20px; }
+}

@@ -43,13 +43,26 @@
 
   /* ---------- Active nav link on scroll ---------- */
   const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+
+  /* Header memakai href "index.html#home", jadi ambil bagian setelah "#". */
   const targets = navLinks
     .map((link) => {
-      const id = link.getAttribute("href");
-      const el = id && id.startsWith("#") ? document.querySelector(id) : null;
+      const href = link.getAttribute("href") || "";
+      const hash = href.indexOf("#");
+      const id = link.getAttribute("data-nav-target") || (hash !== -1 ? href.slice(hash + 1) : "");
+      const el = id ? document.getElementById(id) : null;
       return el ? { link, el } : null;
     })
     .filter(Boolean);
+
+  const setActiveNav = (activeLink) => {
+    navLinks.forEach((link) => {
+      const isActive = link === activeLink;
+      link.classList.toggle("is-active", isActive);
+      if (isActive) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  };
 
   if ("IntersectionObserver" in window && targets.length) {
     const observer = new IntersectionObserver(
@@ -57,8 +70,7 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const match = targets.find((t) => t.el === entry.target);
-          if (!match) return;
-          navLinks.forEach((l) => l.classList.toggle("is-active", l === match.link));
+          if (match) setActiveNav(match.link);
         });
       },
       { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
@@ -81,22 +93,41 @@
     const render = () => {
       dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
       if (counter) counter.textContent = `${pad(index + 1)} / ${pad(cards.length)}`;
+      updateFades();
+    };
+
+    const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
+
+    /* Fade hanya di sisi yang benar-benar masih punya kartu terpotong. */
+    const updateFades = () => {
+      const max = maxScroll();
+      track.classList.toggle("is-fade-start", track.scrollLeft > 2);
+      track.classList.toggle("is-fade-end", track.scrollLeft < max - 2);
+    };
+
+    /* Setiap kartu diposisikan di tengah track, lalu dijepit ke batas scroll. */
+    const leftFor = (i) => {
+      const card = cards[i];
+      const start = card.offsetLeft - track.offsetLeft;
+      const centered = start + card.offsetWidth / 2 - track.clientWidth / 2;
+      return Math.min(maxScroll(), Math.max(0, centered));
     };
 
     const scrollTo = (i, smooth = true) => {
       index = Math.max(0, Math.min(cards.length - 1, i));
-      const card = cards[index];
-      const left = card.offsetLeft - track.offsetLeft;
-      track.scrollTo({ left, behavior: smooth ? "smooth" : "auto" });
+      track.scrollTo({ left: leftFor(index), behavior: smooth ? "smooth" : "auto" });
       render();
+    };
+
+    const step = (dir) => {
+      const max = cards.length - 1;
+      const next = index + dir;
+      scrollTo(next > max ? 0 : next < 0 ? max : next);
     };
 
     document.querySelectorAll("[data-carousel]").forEach((button) => {
       button.addEventListener("click", () => {
-        const dir = button.dataset.carousel === "next" ? 1 : -1;
-        const max = cards.length - 1;
-        const next = index + dir;
-        scrollTo(next > max ? 0 : next < 0 ? max : next);
+        step(button.dataset.carousel === "next" ? 1 : -1);
       });
     });
 
@@ -104,19 +135,20 @@
       dot.addEventListener("click", () => scrollTo(i));
     });
 
-    /* Keep the counter in sync with manual swipes */
-    let frame = 0;
+    /* Keep the counter in sync with manual swipes (tunggu scroll selesai
+       supaya indikator tidak berkedip saat animasi tombol). */
+    let syncTimer = 0;
     track.addEventListener(
       "scroll",
       () => {
-        cancelAnimationFrame(frame);
-        frame = requestAnimationFrame(() => {
-          const center = track.scrollLeft + track.clientWidth / 2;
+        updateFades();
+        clearTimeout(syncTimer);
+        syncTimer = setTimeout(() => {
+          const current = track.scrollLeft;
           let closest = 0;
           let best = Infinity;
-          cards.forEach((card, i) => {
-            const cardCenter = card.offsetLeft - track.offsetLeft + card.offsetWidth / 2;
-            const dist = Math.abs(cardCenter - center);
+          cards.forEach((_, i) => {
+            const dist = Math.abs(leftFor(i) - current);
             if (dist < best) {
               best = dist;
               closest = i;
@@ -126,7 +158,7 @@
             index = closest;
             render();
           }
-        });
+        }, 120);
       },
       { passive: true }
     );
@@ -134,14 +166,26 @@
     track.addEventListener("keydown", (event) => {
       if (event.key === "ArrowRight") {
         event.preventDefault();
-        scrollTo(index + 1);
+        step(1);
       } else if (event.key === "ArrowLeft") {
         event.preventDefault();
-        scrollTo(index - 1);
+        step(-1);
       }
     });
 
     render();
+
+    let resizeFrame = 0;
+    window.addEventListener(
+      "resize",
+      () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(() => {
+          scrollTo(index, false);
+        });
+      },
+      { passive: true }
+    );
   }
 
   /* ---------- Contact: project topic picker ---------- */

@@ -29,6 +29,7 @@
   inset: 0;
   z-index: -1;
   background:
+    radial-gradient(ellipse 62% 48% at 50% 46%, rgba(3, 40, 135, 0.5) 0%, rgba(3, 40, 135, 0) 72%),
     linear-gradient(180deg, rgba(4, 60, 210, 0.25) 0%, rgba(6, 80, 230, 0.05) 55%, rgba(4, 55, 190, 0.35) 100%),
     url("../assets/image%202.png") center / cover no-repeat,
     var(--blue);
@@ -53,6 +54,7 @@
   line-height: 1.5;
   text-align: center;
   color: var(--white);
+  text-shadow: 0 1px 3px rgba(3, 28, 82, 0.45);
 }
 
 /* ---------- Konten 2 Kolom ---------- */
@@ -173,6 +175,7 @@
 
 .rm-card__img {
   width: 100%;
+  height: auto;
   max-width: 240px;
   max-height: 185px;
   margin: 0 auto 20px;

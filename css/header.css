@@ -1,0 +1,87 @@
+/* ==========================================================================
+   HEADER — satu spesifikasi untuk index.html dan roadmap/*.html
+   --------------------------------------------------------------------------
+   Semua ukuran header (tipografi, jarak, tinggi baris) didefinisikan HANYA
+   di file ini, supaya header di setiap halaman benar-benar sama.
+
+   Markup-nya berasal dari header.html (disalin dengan scripts/sync-header.js).
+   ========================================================================== */
+
+.site-header {
+  --header-pad-top: 32px;
+  --header-pad-x: 36px;
+  --header-logo-size: 24px;
+  --header-nav-size: 20px;
+  --header-nav-gap: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: var(--header-pad-top) var(--header-pad-x) 0;
+}
+
+.site-header .logo {
+  flex: 0 0 auto;
+  font-family: var(--logo);
+  font-weight: 700;
+  font-size: var(--header-logo-size);
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--white);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+
+.site-header .site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--header-nav-gap);
+}
+
+.site-header .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0;
+  font-family: var(--logo);
+  font-weight: 700;
+  font-size: var(--header-nav-size);
+  line-height: 1.5;
+  color: var(--white);
+  white-space: nowrap;
+  opacity: 0.92;
+  transition: opacity 0.18s ease;
+}
+
+.site-header .site-nav a:hover,
+.site-header .site-nav a.is-active,
+.site-header .site-nav a[aria-current="page"] {
+  opacity: 1;
+}
+
+.site-header .site-nav a.is-active,
+.site-header .site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
+
+/* Layar sempit: header turun jadi dua baris, ukuran teks tetap konsisten */
+@media (max-width: 900px) {
+  .site-header {
+    --header-pad-top: 20px;
+    --header-pad-x: 20px;
+    --header-logo-size: 20px;
+    --header-nav-size: 15px;
+    --header-nav-gap: 24px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .site-header .site-nav {
+    flex-wrap: wrap;
+  }
+}

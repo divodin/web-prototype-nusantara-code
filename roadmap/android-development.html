@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="../css/roadmap.css" />
+  <link rel="stylesheet" href="../css/header.css" />
 </head>
 <body class="roadmap-page">
 
@@ -18,20 +19,26 @@
     <section class="rm-hero" aria-labelledby="rm-title">
       <div class="rm-hero__bg" aria-hidden="true"></div>
 
-      <div class="rm-hero__top">
-        <a class="rm-logo" href="../index.html#home">NUSANTARA CODE</a>
-        <nav class="rm-nav" aria-label="Navigasi roadmap">
-          <a href="../index.html#home">Beranda</a>
-          <a href="../index.html#about">Tentang Komunitas</a>
-          <a href="android-development.html">Roadmap</a>
-          <a href="../index.html#contact">Contact us</a>
-        </nav>
-      </div>
+<!-- HEADER:START -->
+<header class="site-header">
+  <a class="logo" href="../index.html#home" aria-label="Nusantara Code — beranda">NUSANTARA CODE</a>
+
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <a href="../index.html#home">Beranda</a>
+    <a href="../index.html#about">Tentang Komunitas</a>
+    <a href="android-development.html" aria-current="page">Roadmap</a>
+    <a href="../index.html#contact">Contact us</a>
+  </nav>
+</header>
+<!-- HEADER:END -->
 
       <h1 class="rm-hero__title" id="rm-title">Android Development</h1>
       <p class="rm-hero__sub">Mulai dari dasar, hingga membangun aplikasi mobile yang intereaktif!</p>
 
-      <div class="rm-hero__icon" data-icon="android" aria-hidden="true"></div>
+      <div class="rm-hero__icon" aria-hidden="true">
+        <!-- ikon: assets/Group 3 2.svg -->
+        <svg viewBox="0 0 85 85.326" fill="none" xmlns="http://www.w3.org/2000/svg"><g><g filter="url(#filter1)"><g><path transform="matrix(1 0 0 1 6 61)" d="M71.245 4.155L69.454 8.716L69.401 8.716L67.532 4.155L65.843 4.155L68.643 10.53L67.043 14.076L68.684 14.076L73 4.155L71.245 4.155ZM58.591 0.371L57.027 0.371L57.027 10.888L58.591 10.888L58.591 0.371ZM52.706 0.371L48.945 0.371L48.945 10.888L50.521 10.888L50.521 6.907L52.712 6.907C53.604 6.938 54.471 6.609 55.119 5.996C55.767 5.382 56.143 4.535 56.162 3.642C56.143 2.748 55.767 1.899 55.117 1.284C54.468 0.669 53.599 0.341 52.706 0.371ZM52.747 5.438L50.521 5.438L50.521 1.857L52.753 1.857C53.742 1.857 54.544 2.659 54.544 3.648C54.544 4.637 53.742 5.439 52.753 5.439L52.747 5.438ZM62.447 3.928C61.276 3.861 60.177 4.494 59.647 5.54L61.044 6.137C61.327 5.619 61.89 5.319 62.477 5.373C62.875 5.333 63.273 5.454 63.582 5.708C63.891 5.962 64.086 6.329 64.124 6.728L64.124 6.835C63.624 6.565 63.064 6.423 62.495 6.423C60.996 6.423 59.468 7.247 59.468 8.811C59.468 10.22 60.692 11.127 62.077 11.127C62.88 11.178 63.645 10.783 64.07 10.1L64.13 10.1L64.13 10.912L65.658 10.912L65.658 6.865C65.658 4.997 64.262 3.958 62.459 3.958L62.447 3.928ZM62.262 9.694C61.749 9.694 61.032 9.432 61.032 8.799C61.032 7.987 61.922 7.677 62.698 7.677C63.198 7.663 63.693 7.785 64.13 8.029C64.011 8.973 63.213 9.684 62.262 9.694ZM5.665 11.115C2.574 11.125 0.049 8.648 0 5.558C0.049 2.467 2.574 -0.009 5.665 0.001C7.094 -0.023 8.473 0.53 9.491 1.535L8.41 2.603C7.677 1.885 6.69 1.486 5.665 1.493C3.433 1.493 1.624 3.302 1.624 5.534C1.624 7.766 3.433 9.575 5.665 9.575C6.719 9.618 7.743 9.213 8.482 8.459C8.968 7.935 9.26 7.261 9.312 6.549L5.665 6.549L5.665 5.075L10.798 5.075C10.854 5.388 10.88 5.705 10.875 6.024C10.927 7.345 10.453 8.633 9.556 9.605C8.533 10.639 7.117 11.188 5.665 11.115ZM18.814 7.534C18.868 8.834 18.205 10.06 17.086 10.726C15.968 11.392 14.575 11.392 13.457 10.726C12.338 10.06 11.675 8.834 11.729 7.534C11.675 6.233 12.338 5.008 13.457 4.341C14.575 3.675 15.968 3.675 17.086 4.341C18.205 5.008 18.868 6.233 18.814 7.534ZM17.262 7.534C17.334 6.777 16.971 6.046 16.325 5.646C15.68 5.246 14.863 5.246 14.218 5.646C13.572 6.046 13.209 6.777 13.281 7.534C13.209 8.29 13.572 9.021 14.218 9.421C14.863 9.822 15.68 9.822 16.325 9.421C16.971 9.021 17.334 8.29 17.262 7.534ZM26.753 7.534C26.753 9.489 25.168 11.073 23.213 11.073C21.259 11.073 19.674 9.489 19.674 7.534C19.674 5.579 21.258 3.994 23.213 3.994C25.168 3.994 26.753 5.579 26.753 7.534ZM25.207 7.534C25.279 6.777 24.916 6.046 24.27 5.646C23.625 5.246 22.808 5.246 22.163 5.646C21.517 6.046 21.154 6.777 21.226 7.534C21.154 8.29 21.517 9.022 22.162 9.422C22.808 9.823 23.625 9.823 24.27 9.422C24.916 9.022 25.279 8.29 25.207 7.534ZM34.5 4.173L34.5 10.602C34.5 13.24 32.93 14.326 31.08 14.326C29.693 14.338 28.435 13.514 27.893 12.237L29.248 11.64C29.535 12.385 30.24 12.886 31.038 12.912C32.232 12.912 32.96 12.178 32.96 10.811L32.96 10.297L32.901 10.297C32.427 10.826 31.748 11.124 31.038 11.115C29.06 11.115 27.457 9.512 27.457 7.534C27.457 5.556 29.06 3.952 31.038 3.952C31.752 3.937 32.439 4.228 32.924 4.752L32.984 4.752L32.984 4.155L34.5 4.155L34.5 4.173ZM33.11 7.552C33.154 7.006 32.975 6.465 32.614 6.054C32.253 5.642 31.74 5.394 31.193 5.367C30.636 5.385 30.109 5.627 29.732 6.038C29.355 6.449 29.159 6.995 29.188 7.552C29.162 8.105 29.36 8.645 29.737 9.051C30.115 9.456 30.64 9.692 31.193 9.706C31.737 9.685 32.249 9.443 32.61 9.037C32.972 8.63 33.152 8.094 33.11 7.552ZM37.264 0.383L37.264 10.894L35.688 10.894L35.688 0.383L37.264 0.383ZM43.471 8.716L44.701 9.527C44.034 10.522 42.914 11.118 41.717 11.115C40.769 11.128 39.857 10.753 39.192 10.077C38.528 9.4 38.17 8.481 38.201 7.534C38.056 5.865 39.187 4.353 40.829 4.02C42.47 3.687 44.101 4.639 44.618 6.232L44.779 6.644L40.004 8.62C40.308 9.304 40.998 9.734 41.746 9.706C42.454 9.695 43.106 9.321 43.471 8.716ZM39.705 7.426L42.917 6.101C42.663 5.604 42.137 5.305 41.579 5.343C41.053 5.366 40.558 5.6 40.205 5.991C39.853 6.383 39.673 6.9 39.705 7.426Z" fill="#5F6368"/></g></g><g filter="url(#filter2)"><g><g><path transform="matrix(1 0 0 1 20.207 6.157)" d="M0.185 0C0.06 0.469 -0.002 0.953 0 1.438L0 40.261C0.001 40.746 0.063 41.229 0.185 41.698L21.529 20.287L0.185 0Z" fill="#4285F4"/></g><g><path transform="matrix(1 0 0 1 20.393 2)" d="M20.79 25.006L31.462 14.301L8.272 0.798C7.4 0.278 6.407 0.003 5.396 0C2.887 -0.005 0.682 1.688 0 4.142L20.79 25.006Z" fill="#34A853"/></g><g><path transform="matrix(1 0 0 1 20.393 25.881)" d="M20.636 0L0 21.974C0.469 23.666 1.682 25.042 3.285 25.702C4.887 26.362 6.7 26.233 8.196 25.351L31.416 11.91L20.636 0Z" fill="#EA4335"/></g><g><path transform="matrix(1 0 0 1 40.552 16.301)" d="M21.344 5.845L11.303 0L0 10.081L11.348 21.459L21.314 15.676C23.113 14.718 24.241 12.825 24.241 10.76C24.241 8.696 23.113 6.803 21.314 5.845L21.344 5.845Z" fill="#FBBC04"/></g></g></g></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="47" width="109" height="50.326" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="SourceAlpha" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="filter2" filterUnits="userSpaceOnUse" x="2.207" y="-12" width="80.585" height="86" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="SourceAlpha" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+      </div>
     </section>
 
     <!-- ============ TAHAP + SIDEBAR ============ -->
@@ -40,10 +47,13 @@
 
         <li class="rm-step">
           <div class="rm-step__label">
-            <span class="rm-step__icon" data-icon="code" aria-hidden="true"></span>
-            <span class="rm-step__num">TAHAP 01</span>
+            <span class="rm-step__icon" aria-hidden="true">
+              <!-- ikon: assets/Vector 7.svg -->
+              <svg viewBox="0 0 68.595 68.595" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter1)"><path transform="matrix(1 0 0 1 6 2)" d="M56.595 56.595L0 56.595L0 0L56.595 0L28.298 28.298L56.595 56.595Z" fill="url(#paint2)"/></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="-12" width="92.595" height="92.595" color-interpolation-filters="sRGB"><feImage href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjUgMSA1OC41OTUgNTguNTk1IiB3aWR0aD0iNTguNTk1IiBoZWlnaHQ9IjU4LjU5NSI+PHBhdGggdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA2IDIpIiBkPSJNNTYuNTk1IDU2LjU5NUwwIDU2LjU5NUwwIDBMNTYuNTk1IDBMMjguMjk4IDI4LjI5OEw1Ni41OTUgNTYuNTk1WiIvPjwvc3ZnPg==" x="5" y="1" width="58.595" height="58.595" preserveAspectRatio="none" result="cover"/><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="cover" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="paint2" x1="56.596" y1="-0.001" x2="0" y2="56.595" gradientUnits="userSpaceOnUse"><stop offset="0.003" stop-color="#E44857"/><stop offset="0.469" stop-color="#C711E1"/><stop offset="1" stop-color="#7F52FF"/></linearGradient></defs></svg>
+            </span>
           </div>
           <div>
+            <span class="rm-step__num">TAHAP 01</span>
             <h2 class="rm-step__title">Programming Fundamental</h2>
             <p class="rm-step__desc">Mempelajari dasar pemrograman sebelum membuat aplikasi Android.
               <span class="rm-step__stack">Kotlin · OOP · Data Structures · Algorithms</span>
@@ -53,10 +63,13 @@
 
         <li class="rm-step">
           <div class="rm-step__label">
-            <span class="rm-step__icon" data-icon="tools" aria-hidden="true"></span>
-            <span class="rm-step__num">TAHAP 02</span>
+            <span class="rm-step__icon" aria-hidden="true">
+              <!-- ikon: assets/Vector 8.svg -->
+              <svg viewBox="0 0 68 76.96" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter1)"><path transform="matrix(1 0 0 1 6 2)" d="M24.706 0L31.294 0L31.294 6.588L32.941 6.588C35.67 6.588 37.882 8.8 37.882 11.529L37.882 23.059L36.433 24.508L41.835 33.864C45.492 30.273 47.765 25.299 47.765 19.765L54.353 19.765C54.353 27.736 50.828 34.885 45.228 39.727L55.572 57.647L56 64.96L49.84 60.941L39.727 43.384C36.235 45.129 32.216 46.118 28 46.118C23.784 46.118 19.765 45.129 16.273 43.384L6.16 60.941L0 64.96L0.428 57.647L19.567 24.508L18.118 23.059L18.118 11.529C18.118 8.8 20.33 6.588 23.059 6.588L24.706 6.588L24.706 0ZM19.567 37.652C22.136 38.871 25.002 39.529 28 39.529C30.998 39.529 33.864 38.871 36.433 37.652L31.624 29.318L31.591 29.318C29.548 31.294 26.452 31.294 24.409 29.318L24.376 29.318L19.567 37.652ZM28 13.176C26.181 13.176 24.706 14.651 24.706 16.471C24.706 18.29 26.181 19.765 28 19.765C29.819 19.765 31.294 18.29 31.294 16.471C31.294 14.651 29.819 13.176 28 13.176Z" fill="#4484F6"/></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="-12" width="92" height="100.96" color-interpolation-filters="sRGB"><feImage href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjUgMSA1OCA2Ni45NiIgd2lkdGg9IjU4IiBoZWlnaHQ9IjY2Ljk2Ij48cGF0aCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDYgMikiIGQ9Ik0yNC43MDYgMEwzMS4yOTQgMEwzMS4yOTQgNi41ODhMMzIuOTQxIDYuNTg4QzM1LjY3IDYuNTg4IDM3Ljg4MiA4LjggMzcuODgyIDExLjUyOUwzNy44ODIgMjMuMDU5TDM2LjQzMyAyNC41MDhMNDEuODM1IDMzLjg2NEM0NS40OTIgMzAuMjczIDQ3Ljc2NSAyNS4yOTkgNDcuNzY1IDE5Ljc2NUw1NC4zNTMgMTkuNzY1QzU0LjM1MyAyNy43MzYgNTAuODI4IDM0Ljg4NSA0NS4yMjggMzkuNzI3TDU1LjU3MiA1Ny42NDdMNTYgNjQuOTZMNDkuODQgNjAuOTQxTDM5LjcyNyA0My4zODRDMzYuMjM1IDQ1LjEyOSAzMi4yMTYgNDYuMTE4IDI4IDQ2LjExOEMyMy43ODQgNDYuMTE4IDE5Ljc2NSA0NS4xMjkgMTYuMjczIDQzLjM4NEw2LjE2IDYwLjk0MUwwIDY0Ljk2TDAuNDI4IDU3LjY0N0wxOS41NjcgMjQuNTA4TDE4LjExOCAyMy4wNTlMMTguMTE4IDExLjUyOUMxOC4xMTggOC44IDIwLjMzIDYuNTg4IDIzLjA1OSA2LjU4OEwyNC43MDYgNi41ODhMMjQuNzA2IDBaTTE5LjU2NyAzNy42NTJDMjIuMTM2IDM4Ljg3MSAyNS4wMDIgMzkuNTI5IDI4IDM5LjUyOUMzMC45OTggMzkuNTI5IDMzLjg2NCAzOC44NzEgMzYuNDMzIDM3LjY1MkwzMS42MjQgMjkuMzE4TDMxLjU5MSAyOS4zMThDMjkuNTQ4IDMxLjI5NCAyNi40NTIgMzEuMjk0IDI0LjQwOSAyOS4zMThMMjQuMzc2IDI5LjMxOEwxOS41NjcgMzcuNjUyWk0yOCAxMy4xNzZDMjYuMTgxIDEzLjE3NiAyNC43MDYgMTQuNjUxIDI0LjcwNiAxNi40NzFDMjQuNzA2IDE4LjI5IDI2LjE4MSAxOS43NjUgMjggMTkuNzY1QzI5LjgxOSAxOS43NjUgMzEuMjk0IDE4LjI5IDMxLjI5NCAxNi40NzFDMzEuMjk0IDE0LjY1MSAyOS44MTkgMTMuMTc2IDI4IDEzLjE3NloiLz48L3N2Zz4=" x="5" y="1" width="58" height="66.96" preserveAspectRatio="none" result="cover"/><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="cover" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+            </span>
           </div>
           <div>
+            <span class="rm-step__num">TAHAP 02</span>
             <h2 class="rm-step__title">Development Tools</h2>
             <p class="rm-step__desc">Mengenal perangkat dan software untuk mengembangkan aplikasi.
               <span class="rm-step__stack">Android Studio · Android SDK · Git · Emulator</span>
@@ -66,10 +79,13 @@
 
         <li class="rm-step">
           <div class="rm-step__label">
-            <span class="rm-step__icon" data-icon="android" aria-hidden="true"></span>
-            <span class="rm-step__num">TAHAP 03</span>
+            <span class="rm-step__icon" aria-hidden="true">
+              <!-- ikon: assets/Group 3 2.svg -->
+              <svg viewBox="0 0 85 85.326" fill="none" xmlns="http://www.w3.org/2000/svg"><g><g filter="url(#filter1)"><g><path transform="matrix(1 0 0 1 6 61)" d="M71.245 4.155L69.454 8.716L69.401 8.716L67.532 4.155L65.843 4.155L68.643 10.53L67.043 14.076L68.684 14.076L73 4.155L71.245 4.155ZM58.591 0.371L57.027 0.371L57.027 10.888L58.591 10.888L58.591 0.371ZM52.706 0.371L48.945 0.371L48.945 10.888L50.521 10.888L50.521 6.907L52.712 6.907C53.604 6.938 54.471 6.609 55.119 5.996C55.767 5.382 56.143 4.535 56.162 3.642C56.143 2.748 55.767 1.899 55.117 1.284C54.468 0.669 53.599 0.341 52.706 0.371ZM52.747 5.438L50.521 5.438L50.521 1.857L52.753 1.857C53.742 1.857 54.544 2.659 54.544 3.648C54.544 4.637 53.742 5.439 52.753 5.439L52.747 5.438ZM62.447 3.928C61.276 3.861 60.177 4.494 59.647 5.54L61.044 6.137C61.327 5.619 61.89 5.319 62.477 5.373C62.875 5.333 63.273 5.454 63.582 5.708C63.891 5.962 64.086 6.329 64.124 6.728L64.124 6.835C63.624 6.565 63.064 6.423 62.495 6.423C60.996 6.423 59.468 7.247 59.468 8.811C59.468 10.22 60.692 11.127 62.077 11.127C62.88 11.178 63.645 10.783 64.07 10.1L64.13 10.1L64.13 10.912L65.658 10.912L65.658 6.865C65.658 4.997 64.262 3.958 62.459 3.958L62.447 3.928ZM62.262 9.694C61.749 9.694 61.032 9.432 61.032 8.799C61.032 7.987 61.922 7.677 62.698 7.677C63.198 7.663 63.693 7.785 64.13 8.029C64.011 8.973 63.213 9.684 62.262 9.694ZM5.665 11.115C2.574 11.125 0.049 8.648 0 5.558C0.049 2.467 2.574 -0.009 5.665 0.001C7.094 -0.023 8.473 0.53 9.491 1.535L8.41 2.603C7.677 1.885 6.69 1.486 5.665 1.493C3.433 1.493 1.624 3.302 1.624 5.534C1.624 7.766 3.433 9.575 5.665 9.575C6.719 9.618 7.743 9.213 8.482 8.459C8.968 7.935 9.26 7.261 9.312 6.549L5.665 6.549L5.665 5.075L10.798 5.075C10.854 5.388 10.88 5.705 10.875 6.024C10.927 7.345 10.453 8.633 9.556 9.605C8.533 10.639 7.117 11.188 5.665 11.115ZM18.814 7.534C18.868 8.834 18.205 10.06 17.086 10.726C15.968 11.392 14.575 11.392 13.457 10.726C12.338 10.06 11.675 8.834 11.729 7.534C11.675 6.233 12.338 5.008 13.457 4.341C14.575 3.675 15.968 3.675 17.086 4.341C18.205 5.008 18.868 6.233 18.814 7.534ZM17.262 7.534C17.334 6.777 16.971 6.046 16.325 5.646C15.68 5.246 14.863 5.246 14.218 5.646C13.572 6.046 13.209 6.777 13.281 7.534C13.209 8.29 13.572 9.021 14.218 9.421C14.863 9.822 15.68 9.822 16.325 9.421C16.971 9.021 17.334 8.29 17.262 7.534ZM26.753 7.534C26.753 9.489 25.168 11.073 23.213 11.073C21.259 11.073 19.674 9.489 19.674 7.534C19.674 5.579 21.258 3.994 23.213 3.994C25.168 3.994 26.753 5.579 26.753 7.534ZM25.207 7.534C25.279 6.777 24.916 6.046 24.27 5.646C23.625 5.246 22.808 5.246 22.163 5.646C21.517 6.046 21.154 6.777 21.226 7.534C21.154 8.29 21.517 9.022 22.162 9.422C22.808 9.823 23.625 9.823 24.27 9.422C24.916 9.022 25.279 8.29 25.207 7.534ZM34.5 4.173L34.5 10.602C34.5 13.24 32.93 14.326 31.08 14.326C29.693 14.338 28.435 13.514 27.893 12.237L29.248 11.64C29.535 12.385 30.24 12.886 31.038 12.912C32.232 12.912 32.96 12.178 32.96 10.811L32.96 10.297L32.901 10.297C32.427 10.826 31.748 11.124 31.038 11.115C29.06 11.115 27.457 9.512 27.457 7.534C27.457 5.556 29.06 3.952 31.038 3.952C31.752 3.937 32.439 4.228 32.924 4.752L32.984 4.752L32.984 4.155L34.5 4.155L34.5 4.173ZM33.11 7.552C33.154 7.006 32.975 6.465 32.614 6.054C32.253 5.642 31.74 5.394 31.193 5.367C30.636 5.385 30.109 5.627 29.732 6.038C29.355 6.449 29.159 6.995 29.188 7.552C29.162 8.105 29.36 8.645 29.737 9.051C30.115 9.456 30.64 9.692 31.193 9.706C31.737 9.685 32.249 9.443 32.61 9.037C32.972 8.63 33.152 8.094 33.11 7.552ZM37.264 0.383L37.264 10.894L35.688 10.894L35.688 0.383L37.264 0.383ZM43.471 8.716L44.701 9.527C44.034 10.522 42.914 11.118 41.717 11.115C40.769 11.128 39.857 10.753 39.192 10.077C38.528 9.4 38.17 8.481 38.201 7.534C38.056 5.865 39.187 4.353 40.829 4.02C42.47 3.687 44.101 4.639 44.618 6.232L44.779 6.644L40.004 8.62C40.308 9.304 40.998 9.734 41.746 9.706C42.454 9.695 43.106 9.321 43.471 8.716ZM39.705 7.426L42.917 6.101C42.663 5.604 42.137 5.305 41.579 5.343C41.053 5.366 40.558 5.6 40.205 5.991C39.853 6.383 39.673 6.9 39.705 7.426Z" fill="#5F6368"/></g></g><g filter="url(#filter2)"><g><g><path transform="matrix(1 0 0 1 20.207 6.157)" d="M0.185 0C0.06 0.469 -0.002 0.953 0 1.438L0 40.261C0.001 40.746 0.063 41.229 0.185 41.698L21.529 20.287L0.185 0Z" fill="#4285F4"/></g><g><path transform="matrix(1 0 0 1 20.393 2)" d="M20.79 25.006L31.462 14.301L8.272 0.798C7.4 0.278 6.407 0.003 5.396 0C2.887 -0.005 0.682 1.688 0 4.142L20.79 25.006Z" fill="#34A853"/></g><g><path transform="matrix(1 0 0 1 20.393 25.881)" d="M20.636 0L0 21.974C0.469 23.666 1.682 25.042 3.285 25.702C4.887 26.362 6.7 26.233 8.196 25.351L31.416 11.91L20.636 0Z" fill="#EA4335"/></g><g><path transform="matrix(1 0 0 1 40.552 16.301)" d="M21.344 5.845L11.303 0L0 10.081L11.348 21.459L21.314 15.676C23.113 14.718 24.241 12.825 24.241 10.76C24.241 8.696 23.113 6.803 21.314 5.845L21.344 5.845Z" fill="#FBBC04"/></g></g></g></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="47" width="109" height="50.326" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="SourceAlpha" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="filter2" filterUnits="userSpaceOnUse" x="2.207" y="-12" width="80.585" height="86" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="SourceAlpha" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+            </span>
           </div>
           <div>
+            <span class="rm-step__num">TAHAP 03</span>
             <h2 class="rm-step__title">Android Fundamentals</h2>
             <p class="rm-step__desc">Mempelajari dasar-dasar pengembangan aplikasi Android menggunakan Kotlin. Mulai dari Activity, Fragment, Layout, Intent, sampai Lifecycle dan cara mengelola data di dalam aplikasi.</p>
           </div>
@@ -77,11 +93,14 @@
 
         <li class="rm-step">
           <div class="rm-step__label">
-            <span class="rm-step__icon" data-icon="layout" aria-hidden="true"></span>
-            <span class="rm-step__num">TAHAP 04</span>
+            <span class="rm-step__icon" aria-hidden="true">
+              <!-- ikon: assets/Vector 10.svg -->
+              <svg viewBox="0 0 69.69 76.446" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter1)"><path transform="matrix(1 0 0 1 6 2)" d="M25.395 0.931C26.551 0.265 27.874 -0.055 29.208 0.008L29.218 0.018C30.307 0.077 31.366 0.39 32.312 0.931L54.221 13.587C55.086 14.089 55.833 14.77 56.412 15.585L45.883 21.667C45.498 21.167 45.018 20.747 44.471 20.432L31.176 12.752C29.714 11.908 27.912 11.908 26.45 12.752L13.155 20.432C12.498 20.823 11.943 21.364 11.536 22.011L0.91 16.184C1.518 15.107 2.401 14.211 3.469 13.587L25.395 0.931Z" fill="#3DDC84"/><path transform="matrix(1 0 0 1 6 2)" d="M26.992 13.686C27.548 13.366 28.177 13.198 28.818 13.198L28.821 13.198C29.461 13.194 30.091 13.359 30.647 13.676L43.939 21.356C44.321 21.582 44.66 21.875 44.941 22.22L39.9 25.12L39.906 25.126L39.857 25.153C39.673 24.942 39.458 24.762 39.218 24.618L30.26 19.441C29.387 18.936 28.311 18.936 27.438 19.441L18.469 24.618C18.147 24.809 17.865 25.06 17.637 25.357L12.481 22.524C12.79 22.044 13.208 21.644 13.7 21.356L26.992 13.686Z" fill="#3DDC84"/><path transform="matrix(1 0 0 1 6 2)" d="M46.305 22.352L56.831 16.283L56.836 16.297C57.389 17.308 57.682 18.441 57.69 19.594L57.69 44.9C57.687 47.37 56.368 49.652 54.229 50.888L32.312 63.544C31.435 64.024 30.465 64.311 29.468 64.384L29.468 52.236C30.072 52.155 30.655 51.96 31.187 51.662L44.479 43.982C45.95 43.128 46.842 41.562 46.842 39.879L46.842 24.532C46.841 23.773 46.656 23.025 46.305 22.352Z" fill="#4285F4"/><path transform="matrix(1 0 0 1 6 2)" d="M40.298 25.824L45.373 22.892L45.37 22.902C45.626 23.408 45.762 23.966 45.765 24.532L45.765 39.879C45.767 41.185 45.071 42.394 43.939 43.047L30.65 50.724C30.284 50.936 29.876 51.073 29.468 51.146L29.468 45.319C29.746 45.265 30.013 45.168 30.26 45.032L39.218 39.849C40.094 39.347 40.631 38.429 40.631 37.413L40.631 27.059C40.615 26.627 40.501 26.205 40.298 25.824Z" fill="#4285F4"/><path transform="matrix(1 0 0 1 6 2)" d="M11.874 24.532C11.877 24.091 11.957 23.654 12.111 23.241L17.167 26.017L17.258 26.052C17.123 26.376 17.053 26.722 17.051 27.073L17.051 37.419C17.057 38.429 17.601 39.359 18.48 39.857L27.441 45.034C27.822 45.238 28.244 45.351 28.676 45.365L28.676 51.202C28.099 51.173 27.513 51.028 26.992 50.727L13.7 43.047C12.568 42.394 11.872 41.185 11.874 39.879L11.874 24.532Z" fill="#073042"/><path transform="matrix(1 0 0 1 6 2)" d="M0 19.581C0.026 18.663 0.234 17.76 0.61 16.922L11.149 22.717C10.916 23.294 10.797 23.91 10.797 24.532L10.797 39.881C10.798 41.57 11.694 43.132 13.152 43.984L26.442 51.648C27.123 52.041 27.892 52.258 28.679 52.279L28.679 64.446C27.524 64.422 26.394 64.112 25.389 63.544L3.472 50.888C1.318 49.648 0 47.368 0 44.903L0 19.581Z" fill="#073042"/></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="-12" width="93.69" height="100.446" color-interpolation-filters="sRGB"><feImage href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjUgMSA1OS42OSA2Ni40NDYiIHdpZHRoPSI1OS42OSIgaGVpZ2h0PSI2Ni40NDYiPjxwYXRoIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgNiAyKSIgZD0iTTI1LjM5NSAwLjkzMUMyNi41NTEgMC4yNjUgMjcuODc0IC0wLjA1NSAyOS4yMDggMC4wMDhMMjkuMjE4IDAuMDE4QzMwLjMwNyAwLjA3NyAzMS4zNjYgMC4zOSAzMi4zMTIgMC45MzFMNTQuMjIxIDEzLjU4N0M1NS4wODYgMTQuMDg5IDU1LjgzMyAxNC43NyA1Ni40MTIgMTUuNTg1TDQ1Ljg4MyAyMS42NjdDNDUuNDk4IDIxLjE2NyA0NS4wMTggMjAuNzQ3IDQ0LjQ3MSAyMC40MzJMMzEuMTc2IDEyLjc1MkMyOS43MTQgMTEuOTA4IDI3LjkxMiAxMS45MDggMjYuNDUgMTIuNzUyTDEzLjE1NSAyMC40MzJDMTIuNDk4IDIwLjgyMyAxMS45NDMgMjEuMzY0IDExLjUzNiAyMi4wMTFMMC45MSAxNi4xODRDMS41MTggMTUuMTA3IDIuNDAxIDE0LjIxMSAzLjQ2OSAxMy41ODdMMjUuMzk1IDAuOTMxWk0yOC44MjEgMTMuMTk4QzI5LjQ2MSAxMy4xOTQgMzAuMDkxIDEzLjM1OSAzMC42NDcgMTMuNjc2TDQzLjkzOSAyMS4zNTZDNDQuMzIxIDIxLjU4MiA0NC42NiAyMS44NzUgNDQuOTQxIDIyLjIyTDM5LjkgMjUuMTJMMzkuOTA2IDI1LjEyNkwzOS44NTcgMjUuMTUzQzM5LjY3MyAyNC45NDIgMzkuNDU4IDI0Ljc2MiAzOS4yMTggMjQuNjE4TDMwLjI2IDE5LjQ0MUMyOS4zODcgMTguOTM2IDI4LjMxMSAxOC45MzYgMjcuNDM4IDE5LjQ0MUwxOC40NjkgMjQuNjE4QzE4LjE0NyAyNC44MDkgMTcuODY1IDI1LjA2IDE3LjYzNyAyNS4zNTdMMTIuNDgxIDIyLjUyNEMxMi43OSAyMi4wNDQgMTMuMjA4IDIxLjY0NCAxMy43IDIxLjM1NkwyNi45OTIgMTMuNjg2QzI3LjU0NyAxMy4zNjYgMjguMTc2IDEzLjE5OCAyOC44MTYgMTMuMTk4QzI4LjgxNyAxMy4xOTggMjguODE4IDEzLjE5OCAyOC44MTggMTMuMTk4TDI4LjgyMSAxMy4xOThaTTQ2LjMwNSAyMi4zNTJMNTYuODMxIDE2LjI4M0w1Ni44MzYgMTYuMjk3QzU3LjM4OSAxNy4zMDggNTcuNjgyIDE4LjQ0MSA1Ny42OSAxOS41OTRMNTcuNjkgNDQuOUM1Ny42ODcgNDcuMzcgNTYuMzY4IDQ5LjY1MiA1NC4yMjkgNTAuODg4TDMyLjMxMiA2My41NDRDMzEuNDM1IDY0LjAyNCAzMC40NjUgNjQuMzExIDI5LjQ2OCA2NC4zODRMMjkuNDY4IDUyLjIzNkMzMC4wNzIgNTIuMTU1IDMwLjY1NSA1MS45NiAzMS4xODcgNTEuNjYyTDQ0LjQ3OSA0My45ODJDNDUuOTUgNDMuMTI4IDQ2Ljg0MiA0MS41NjIgNDYuODQyIDM5Ljg3OUw0Ni44NDIgMjQuNTMyQzQ2Ljg0MSAyMy43NzMgNDYuNjU2IDIzLjAyNSA0Ni4zMDUgMjIuMzUyWk0wIDE5LjU4MUMwLjAyNiAxOC42NjMgMC4yMzQgMTcuNzYgMC42MSAxNi45MjJMMTEuMTQ5IDIyLjcxN0MxMC45MTYgMjMuMjk0IDEwLjc5NyAyMy45MSAxMC43OTcgMjQuNTMyTDEwLjc5NyAzOS44ODFDMTAuNzk4IDQxLjU3IDExLjY5NCA0My4xMzIgMTMuMTUyIDQzLjk4NEwyNi40NDIgNTEuNjQ4QzI3LjEyMyA1Mi4wNDEgMjcuODkyIDUyLjI1OCAyOC42NzkgNTIuMjc5TDI4LjY3OSA2NC40NDZDMjcuNTI0IDY0LjQyMiAyNi4zOTQgNjQuMTEyIDI1LjM4OSA2My41NDRMMy40NzIgNTAuODg4QzEuMzE4IDQ5LjY0OCAwIDQ3LjM2OCAwIDQ0LjkwM0wwIDE5LjU4MVpNNDAuMjk4IDI1LjgyNEw0NS4zNzMgMjIuODkyTDQ1LjM3IDIyLjkwMkM0NS42MjYgMjMuNDA4IDQ1Ljc2MiAyMy45NjYgNDUuNzY1IDI0LjUzMkw0NS43NjUgMzkuODc5QzQ1Ljc2NyA0MS4xODUgNDUuMDcxIDQyLjM5NCA0My45MzkgNDMuMDQ3TDMwLjY1IDUwLjcyNEMzMC4yODQgNTAuOTM2IDI5Ljg3NiA1MS4wNzMgMjkuNDY4IDUxLjE0NkwyOS40NjggNDUuMzE5QzI5Ljc0NiA0NS4yNjUgMzAuMDEzIDQ1LjE2OCAzMC4yNiA0NS4wMzJMMzkuMjE4IDM5Ljg0OUM0MC4wOTQgMzkuMzQ3IDQwLjYzMSAzOC40MjkgNDAuNjMxIDM3LjQxM0w0MC42MzEgMjcuMDU5QzQwLjYxNSAyNi42MjcgNDAuNTAxIDI2LjIwNSA0MC4yOTggMjUuODI0Wk0xMS44NzQgMjQuNTMyQzExLjg3NyAyNC4wOTEgMTEuOTU3IDIzLjY1NCAxMi4xMTEgMjMuMjQxTDE3LjE2NyAyNi4wMTdMMTcuMjU4IDI2LjA1MkMxNy4xMjMgMjYuMzc2IDE3LjA1MyAyNi43MjIgMTcuMDUxIDI3LjA3M0wxNy4wNTEgMzcuNDE5QzE3LjA1NyAzOC40MjkgMTcuNjAxIDM5LjM1OSAxOC40OCAzOS44NTdMMjcuNDQxIDQ1LjAzNEMyNy44MjIgNDUuMjM4IDI4LjI0NCA0NS4zNTEgMjguNjc2IDQ1LjM2NUwyOC42NzYgNTEuMjAyQzI4LjA5OSA1MS4xNzMgMjcuNTEzIDUxLjAyOCAyNi45OTIgNTAuNzI3TDEzLjcgNDMuMDQ3QzEyLjU2OCA0Mi4zOTQgMTEuODcyIDQxLjE4NSAxMS44NzQgMzkuODc5TDExLjg3NCAyNC41MzJaIi8+PC9zdmc+" x="5" y="1" width="59.69" height="66.446" preserveAspectRatio="none" result="cover"/><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="cover" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+            </span>
           </div>
           <div>
-            <h2 class="rm-step__title">UI &amp; Navigation</h2>
+            <span class="rm-step__num">TAHAP 04</span>
+            <h2 class="rm-step__title">UI & Navigation</h2>
             <p class="rm-step__desc">Membuat tampilan aplikasi dan navigasi antarhalaman.
               <span class="rm-step__stack">Jetpack Compose · Layout · Components · Navigation</span>
             </p>
@@ -90,11 +109,14 @@
 
         <li class="rm-step">
           <div class="rm-step__label">
-            <span class="rm-step__icon" data-icon="layers" aria-hidden="true"></span>
-            <span class="rm-step__num">TAHAP 05</span>
+            <span class="rm-step__icon" aria-hidden="true">
+              <!-- ikon: assets/Group 10.svg -->
+              <svg viewBox="0 0 81.833 71.512" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter1)"><g><path transform="matrix(1 0 0 1 11.341 26.796)" d="M59.531 0C61.144 0 62.656 0.784 63.585 2.101C64.514 3.419 64.745 5.107 64.203 6.626L56.516 28.134C55.107 32.077 51.375 34.71 47.188 34.715L4.577 34.715C2.983 34.713 1.413 34.327 0 33.589L7.489 5.52C8.358 2.263 11.309 -0.002 14.68 0L59.531 0Z" fill="#DD8A0C"/></g><g><path transform="matrix(1 0 0 1 6 2)" d="M17.784 0C19.099 0 20.36 0.523 21.29 1.453L29.756 9.919L49.593 9.919C55.071 9.919 59.512 14.359 59.512 19.837L20.016 19.837C14.401 19.838 9.488 23.612 8.039 29.037L1.265 54.428C0.437 52.951 0.002 51.286 0 49.593L0 9.919C0 4.441 4.441 0 9.919 0L17.784 0Z" fill="#DD8A0C"/></g></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="-12" width="105.833" height="95.512" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="SourceAlpha" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+            </span>
           </div>
           <div>
-            <h2 class="rm-step__title">Architectur &amp; Pattern</h2>
+            <span class="rm-step__num">TAHAP 05</span>
+            <h2 class="rm-step__title">Architectur & Pattern</h2>
             <p class="rm-step__desc">Mempelajari struktur kode agar aplikasi mudah dikembangkan.
               <span class="rm-step__stack">MVVM · ViewModel · Repository · Dependency Injection</span>
             </p>
@@ -103,11 +125,14 @@
 
         <li class="rm-step">
           <div class="rm-step__label">
-            <span class="rm-step__icon" data-icon="network" aria-hidden="true"></span>
-            <span class="rm-step__num">TAHAP 06</span>
+            <span class="rm-step__icon" aria-hidden="true">
+              <!-- ikon: assets/Group 9.svg -->
+              <svg viewBox="0 0 107.67 113.965" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter1)"><g opacity="0.2"><path transform="matrix(-1 0 0 -1 80.728 42.509)" d="M55.857 10.819C55.857 16.794 43.353 21.638 27.929 21.638C12.504 21.638 0 16.794 0 10.819C0 4.844 12.504 0 27.929 0C43.353 0 55.857 4.844 55.857 10.819Z" fill="#0866F5"/></g><g><path transform="matrix(0 1 -1 0 80.728 31.69)" d="M0 0L43.182 0" fill="none" stroke="#0866F5" stroke-width="4.718" stroke-linecap="round" stroke-linejoin="round"/></g><g opacity="0.2"><path transform="matrix(1 0 0 1 25.28 59.656)" d="M0 6.913C0 3.296 0 1.503 1.195 0.56C2.359 -0.384 4.12 -0.006 7.611 0.748L26.325 4.743C26.985 4.9 27.3 4.963 27.646 4.963C27.992 4.963 28.306 4.9 28.966 4.774L47.9 0.748C51.423 -0.006 53.184 -0.384 54.348 0.56C55.511 1.503 55.511 3.296 55.511 6.881L55.511 13.769C55.511 16.128 55.511 17.323 54.819 18.172C54.19 19.022 52.995 19.305 50.731 19.871L29.155 25.155C28.4 25.312 28.023 25.406 27.646 25.406C27.268 25.406 26.891 25.312 26.136 25.123L4.812 19.871C2.516 19.305 1.352 19.022 0.692 18.172C0 17.323 0 16.128 0 13.769L0 6.913Z" fill="#0866F5"/></g><g><path transform="matrix(-1 0 0 -1 80.728 42.509)" d="M55.857 10.819C55.857 16.794 43.353 21.638 27.929 21.638C12.504 21.638 0 16.794 0 10.819C0 4.844 12.504 0 27.929 0C43.353 0 55.857 4.844 55.857 10.819Z" fill="none" stroke="#0866F5" stroke-width="4.718" stroke-linecap="round" stroke-linejoin="round"/></g><g><path transform="matrix(1 0 0 1 24.871 52.825)" d="M0 0C0 5.881 12.518 10.63 27.929 10.63C43.34 10.63 55.857 5.881 55.857 0" fill="none" stroke="#0866F5" stroke-width="4.718" stroke-linecap="round" stroke-linejoin="round"/></g><g><path transform="matrix(1 0 0 1 26.942 31.69)" d="M9.247 19.091C10.505 19.909 12.864 20.946 16.166 21.607C19.846 22.299 21.638 22.393 24.563 22.393M9.247 39.094C10.505 39.88 12.864 40.918 16.166 41.578C19.846 42.302 21.638 42.396 24.563 42.396M0 42.774C0 48.655 12.518 53.404 27.929 53.404C43.34 53.404 55.857 48.655 55.857 42.774M0 0L0 42.082" fill="none" stroke="#0866F5" stroke-width="4.718" stroke-linecap="round" stroke-linejoin="round"/></g></g><defs><filter id="filter1" filterUnits="userSpaceOnUse" x="-12" y="-12" width="131.67" height="137.965" color-interpolation-filters="sRGB"><feOffset in="SourceAlpha" dx="0" dy="4"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" result="s0"/><feComposite in="s0" in2="SourceAlpha" operator="out" result="s0"/><feMerge><feMergeNode in="s0"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+            </span>
           </div>
           <div>
-            <h2 class="rm-step__title">Database &amp; Networking</h2>
+            <span class="rm-step__num">TAHAP 06</span>
+            <h2 class="rm-step__title">Database & Networking</h2>
             <p class="rm-step__desc">Mempelajari cara menyimpan, mengelola, dan menghubungkan data menggunakan database seperti MySQL atau PostgreSQL</p>
           </div>
         </li>
@@ -116,22 +141,23 @@
 
       <aside class="rm-side">
         <article class="rm-card">
+          <img class="rm-card__img" src="../assets/Android Dev.png" alt="Ilustrasi roadmap Android" loading="lazy" />
           <div class="rm-card__head">
-            <span data-icon="info" aria-hidden="true"></span>
+            
             <h2 class="rm-card__title">Apa itu Android Development Roadmap?</h2>
           </div>
           <p class="rm-card__text">Panduan lengkap untuk memulai perjalanan menjadi Android Developer, mulai dari dasar pemrograman, pengembangan aplikasi, hingga membangun aplikasi Android yang siap digunakan.</p>
         </article>
 
         <article class="rm-card rm-card--blue">
+          <img class="rm-card__img" src="../assets/Ilustrasi Pembelajaran Android Modern.png" alt="Ilustrasi belajar Android" loading="lazy" />
           <div class="rm-card__head">
-            <span data-icon="spark" aria-hidden="true"></span>
+            
             <h2 class="rm-card__title">Belajar Secara Bertahap!</h2>
           </div>
           <div class="rm-card__body">
             <p>Mulai dari Kotlin, pahami Android Studio, lalu pelajari Jetpack Compose hingga berhasil membangun aplikasi Android pertamamu.</p>
           </div>
-          <img class="rm-card__img" src="../assets/roadmap/android-side.jpg" alt="Ilustrasi belajar Android development" loading="lazy" />
         </article>
       </aside>
     </div>

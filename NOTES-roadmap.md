@@ -1,4 +1,4 @@
-# Sumber data — halaman roadmap (FigCraft "ANU 1")
+# Sumber data — halaman roadmap
 
 Frame sumber: `frame overlay roadmap` (#77309411654) → nama frame di tab: **UI/UX** `#60129542312`, **Web Development** `#60129542145`, **Android Development** `#55834575057`.
 
